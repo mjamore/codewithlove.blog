@@ -1,8 +1,8 @@
 import cn from 'classnames';
 import MobileMenu from './MobileMenu';
 import NextLink from 'next/link';
+import ThemeSwitcher from './ThemeSwitcher';
 // import { useRouter } from 'next/router';
-// import ThemeSwitcher from './ThemeSwitcher';
 
 interface NavItemProps {
   href: string;
@@ -32,14 +32,14 @@ function NavItem({ href, text }: NavItemProps) {
 export default function Header() {
   return (
     <div className="flex flex-col justify-center px-8">
-      <nav className="flex items-center justify-between w-full relative max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pt-8 pb-8 sm:pb-16  text-gray-900">
+      <nav className="flex items-center justify-between w-full relative max-w-4xl border-gray-200 dark:border-gray-700 mx-auto pt-8 pb-8 sm:pb-16  text-gray-900">
         <div className="ml-[-0.60rem]">
           <MobileMenu />
           <NavItem href="/" text="Home" />
           <NavItem href="/notes" text="Notes" />
           <NavItem href="/about" text="About" />
         </div>
-        {/* <ThemeSwitcher /> */}
+        <ThemeSwitcher />
       </nav>
     </div>
   );
