@@ -4,7 +4,12 @@ import NextLink from 'next/link';
 // import { useRouter } from 'next/router';
 // import ThemeSwitcher from './ThemeSwitcher';
 
-function NavItem({ href, text }) {
+interface NavItemProps {
+  href: string;
+  text: string;
+}
+
+function NavItem({ href, text }: NavItemProps) {
   // const router = useRouter();
   // const isActive = router.asPath === href;
   const isActive = false;
