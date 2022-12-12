@@ -1,5 +1,6 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Image from 'next/image';
+import styles from './page.module.css';
+import cn from 'classnames';
 
 export default function Home() {
   return (
@@ -8,6 +9,8 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js 13!</a>
         </h1>
+
+        <h2 className={cn('text-3xl font-bold underline')}>Tester Text</h2>
 
         <p className={styles.description}>
           Get started by editing{' '}
@@ -53,5 +56,5 @@ export default function Home() {
         </a>
       </footer>
     </div>
-  )
+  );
 }
