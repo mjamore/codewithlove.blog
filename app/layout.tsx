@@ -4,6 +4,7 @@ import styles from './page.module.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import { Providers } from './providers';
+import cn from 'classnames';
 
 const interVariable = Inter();
 
@@ -13,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={interVariable.className}>
+    <html lang="en">
       {/*
         <head /> will contain the components returned by the nearest parent
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
@@ -23,7 +24,12 @@ export default function RootLayout({
         <Providers>
           <Header />
           <div className={styles.container}>
-            <main className={styles.main}>{children}</main>
+            <main
+              data-test="main-wrapper"
+              className={cn(styles.main, interVariable.className)}
+            >
+              {children}
+            </main>
           </div>
           <Footer />
         </Providers>
