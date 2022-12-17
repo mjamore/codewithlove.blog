@@ -1,7 +1,14 @@
-export default function NotesPage() {
+interface BlogTopicsProps {
+  params: {
+    topic: string;
+  };
+}
+
+export default function BlogTopics({ params }: BlogTopicsProps) {
+  console.log(params.topic);
   return (
     <div>
-      <div>Notes Page</div>
+      <div>Blog Topics Page: {`${params.topic}`}</div>
       <p>
         I try my best to document things I learn as I learn them. This has a few
         great benefits:

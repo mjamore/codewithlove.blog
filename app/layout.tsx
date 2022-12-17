@@ -3,7 +3,7 @@ import '../styles/globals.css';
 import styles from './page.module.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import { Providers } from './providers';
+import { Providers } from './utils/providers';
 import cn from 'classnames';
 
 const interVariable = Inter();

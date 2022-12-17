@@ -36,7 +36,7 @@ export default function Header() {
         <div className="ml-[-0.60rem]">
           <MobileMenu />
           <NavItem href="/" text="Home" />
-          <NavItem href="/notes" text="Notes" />
+          <NavItem href="/blog" text="Blog" />
           <NavItem href="/about" text="About" />
         </div>
         <ThemeSwitcher />
