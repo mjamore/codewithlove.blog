@@ -31,16 +31,14 @@ function NavItem({ href, text }: NavItemProps) {
 
 export default function Header() {
   return (
-    <div className="flex flex-col justify-center px-8">
-      <nav className="flex items-center justify-between w-full relative max-w-4xl border-gray-200 dark:border-gray-700 mx-auto pt-8 pb-8 sm:pb-16  text-gray-900">
-        <div className="ml-[-0.60rem]">
-          <MobileMenu />
-          <NavItem href="/" text="Home" />
-          <NavItem href="/blog" text="Blog" />
-          <NavItem href="/about" text="About" />
-        </div>
-        <ThemeSwitcher />
-      </nav>
-    </div>
+    <nav className="flex items-center justify-between w-full relative border-gray-200 dark:border-gray-700 mx-auto pt-8 pb-8 sm:pb-16  text-gray-900">
+      <div className="ml-[-0.60rem]">
+        <MobileMenu />
+        <NavItem href="/" text="Home" />
+        <NavItem href="/blog" text="Blog" />
+        <NavItem href="/about" text="About" />
+      </div>
+      <ThemeSwitcher />
+    </nav>
   );
 }

@@ -1,10 +1,9 @@
-# amore.codes
+# codewithlove.blog
 
-My personal website for documenting my journey as a web developer.
+A blog for documenting my journey in the field of software engineering.
 
 ## TO-DO
 
-- Add Tailwind
 - Create navbar
   - use mobile navbar from other project
 - Copy light/dark mode switcher from other project

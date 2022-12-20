@@ -2,5 +2,8 @@
   "extends": [
     "plugin:react-hooks/recommended",
     "next/core-web-vitals"
-  ]
+  ],
+  "rules": {
+    "max-len": 0
+  }
 }

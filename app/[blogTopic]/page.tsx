@@ -1,14 +1,13 @@
 interface BlogTopicsProps {
   params: {
-    topic: string;
+    blogTopic: string;
   };
 }
 
 export default function BlogTopics({ params }: BlogTopicsProps) {
-  console.log(params.topic);
   return (
     <div>
-      <div>Blog Topics Page: {`${params.topic}`}</div>
+      <div>Blog Topics Page: {`${params.blogTopic}`}</div>
       <p>
         I try my best to document things I learn as I learn them. This has a few
         great benefits:

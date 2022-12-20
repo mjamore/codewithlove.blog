@@ -8,11 +8,7 @@ import cn from 'classnames';
 
 const interVariable = Inter();
 
-export default function RootLayout({
-  children
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       {/*
@@ -22,12 +18,9 @@ export default function RootLayout({
       <head />
       <body>
         <Providers>
-          <Header />
-          <div className={styles.container}>
-            <main
-              data-test="main-wrapper"
-              className={cn(styles.main, interVariable.className)}
-            >
+          <div className={'flex flex-col justify-center mx-auto px-8 w-full relative max-w-4xl'}>
+            <Header />
+            <main data-test="main-wrapper" className={cn(styles.main, interVariable.className)}>
               {children}
             </main>
           </div>
