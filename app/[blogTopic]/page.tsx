@@ -1,4 +1,4 @@
-import { BLOG } from '../utils/constants';
+import { BLOG_TOPICS } from '../utils/constants';
 
 interface BlogTopicsProps {
   params: {
@@ -7,7 +7,7 @@ interface BlogTopicsProps {
 }
 
 export default function BlogTopics({ params }: BlogTopicsProps) {
-  const topics = BLOG.TOPICS.map((topic) => {
+  const topics = BLOG_TOPICS.map((topic) => {
     return (
       <li key={topic.directory}>
         <h3>{topic.friendlyName}</h3>
