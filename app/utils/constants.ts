@@ -3,29 +3,31 @@ export const URLS = {
   ROUTES: {
     HOME: '/',
     ABOUT: '/about',
-    BLOG_TOPIC: `/blog/{blogTopic}`,
-    BLOG_ARTICLE: `/blog/{blogTopic}/{blogArticle}`
+    TOPICS: '/topics',
+    TOPIC: `/topics/{topic}`,
+    TOPIC_CSS: `/topics/css`,
+    TOPIC_NEXTJS_13: `/topics/nextjs-13`
   }
 };
 
-export type BlogTopic = {
+export type Topic = {
   friendlyName: string;
   directory: string;
   icon: string;
   url: string;
 };
 
-export const BLOG_TOPICS: BlogTopic[] = [
+export const TOPICS: Topic[] = [
   {
     friendlyName: 'CSS',
     directory: 'css',
     icon: '',
-    url: '/css'
+    url: URLS.ROUTES.TOPIC_CSS
   },
   {
     friendlyName: 'Next.js 13',
     directory: 'nextjs-13',
     icon: '',
-    url: '/nextjs-13'
+    url: URLS.ROUTES.TOPIC_NEXTJS_13
   }
 ];

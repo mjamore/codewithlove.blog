@@ -4,10 +4,10 @@ import NextLink from 'next/link';
 import ThemeSwitcher from './ThemeSwitcher';
 // import { useRouter } from 'next/router';
 
-interface NavItemProps {
+type NavItemProps = {
   href: string;
   text: string;
-}
+};
 
 function NavItem({ href, text }: NavItemProps) {
   // const router = useRouter();
@@ -18,9 +18,7 @@ function NavItem({ href, text }: NavItemProps) {
     <NextLink
       href={href}
       className={cn(
-        isActive
-          ? 'font-semibold text-gray-800 dark:text-gray-200'
-          : 'font-normal text-gray-600 dark:text-gray-400',
+        isActive ? 'font-semibold text-gray-800 dark:text-gray-200' : 'font-normal text-gray-600 dark:text-gray-400',
         'hidden md:inline-block p-1 sm:px-3 sm:py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-all'
       )}
     >
@@ -35,7 +33,7 @@ export default function Header() {
       <div className="ml-[-0.60rem]">
         <MobileMenu />
         <NavItem href="/" text="Home" />
-        <NavItem href="/blog" text="Blog" />
+        <NavItem href="/topics" text="Topics" />
         <NavItem href="/about" text="About" />
       </div>
       <ThemeSwitcher />
