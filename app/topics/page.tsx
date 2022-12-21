@@ -1,8 +1,11 @@
 import Link from 'next/link';
 import { TOPICS } from '../utils/constants';
+import { getTopics } from '../utils/filesystem';
 
-export default function Topics() {
-  const topics = TOPICS.map((topic) => {
+export default async function TopicsPage() {
+  const topics = await getTopics();
+
+  const Topics = TOPICS.map((topic) => {
     return (
       <Link href={topic.url} key={topic.directory}>
         <li>
@@ -14,9 +17,8 @@ export default function Topics() {
 
   return (
     <div>
-      <p>URL: codewithlove.blog/topics</p>
       <h3>Blog Topics:</h3>
-      <ul>{topics}</ul>
+      <ul>{Topics}</ul>
     </div>
   );
 }

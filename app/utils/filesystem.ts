@@ -1,9 +1,11 @@
 import fs from 'fs';
+import { readdir } from 'node:fs/promises';
 import path from 'path';
 import { MDXRemoteSerializeResult } from 'next-mdx-remote';
-import { BLOG_POSTS_PATH } from '../utils/mdx';
 import matter from 'gray-matter';
 import { serialize } from 'next-mdx-remote/serialize';
+import { BLOG_POSTS_PATH } from './mdx';
+import { TOPICS } from '../utils/constants';
 
 type BlogContent = {
   source: MDXRemoteSerializeResult;
@@ -36,6 +38,50 @@ export const getArticleContent = async (topic: string, article: string): Promise
     } else {
       console.log(`file DOES NOT exists`);
       reject(`Request path ${postFilePath} doesn't exist`);
+    }
+  });
+};
+
+type Topic = {
+  directory: string;
+  friendlyName: string;
+  url: string;
+};
+
+export const getTopics = async (): Promise<Topic[]> => {
+  return new Promise<Topic[]>(async (resolve, reject) => {
+    try {
+      // go to /data/blog and get a list of directories
+      const files = await readdir(BLOG_POSTS_PATH, { withFileTypes: true });
+      const directories = files.filter((file) => file.isDirectory());
+
+      // create an array to hold the list of topics in /data/blog
+      let topics: Topic[] = [];
+
+      for (const directory of directories) {
+        // create a new topic from the current directory
+        let topic: Topic = {
+          directory: directory.name,
+          url: `/topics/${directory.name}`,
+          friendlyName: directory.name
+        };
+
+        // if the directory exists in the constants file, override the friendlyName of the topic
+        TOPICS.forEach((innerTopic) => {
+          if (innerTopic.directory === directory.name) {
+            topic.friendlyName = innerTopic.friendlyName;
+          }
+        });
+
+        // add this topic to the list of topics in /data/blog
+        topics.push(topic);
+      }
+
+      resolve(topics);
+    } catch (err) {
+      console.error(err);
+      const response: Topic[] = [];
+      reject(response);
     }
   });
 };
