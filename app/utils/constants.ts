@@ -1,3 +1,5 @@
+import { Topic } from './types';
+
 export const URLS = {
   DOMAIN: 'https://codewithlove.blog',
   ROUTES: {
@@ -7,21 +9,6 @@ export const URLS = {
     TOPIC_CSS: '/topics/css',
     TOPIC_NEXTJS_13: '/topics/nextjs-13'
   }
-};
-
-export type Article = {
-  title: string;
-  description: string;
-  author: string;
-  url: string;
-  editedDate: string;
-};
-
-export type Topic = {
-  friendlyName: string;
-  directory: string;
-  icon: string;
-  url: string;
 };
 
 export const TOPICS: Topic[] = [

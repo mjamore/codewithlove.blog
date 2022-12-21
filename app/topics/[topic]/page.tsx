@@ -3,23 +3,16 @@ import Link from 'next/link';
 import { BLOG_POSTS_PATH } from '../../utils/mdx';
 import { readdir } from 'node:fs/promises';
 import { getArticleContent } from '../../utils/filesystem';
+import { ArticleMetaData } from '../../utils/types';
 
-type ArticleMetaData = {
-  title: string;
-  description: string;
-  author: string;
-  url: string;
-  editedDate: string;
-};
-
-type TopicProps = {
+type TopicPageProps = {
   params: {
     topic: string;
   };
 };
 
 // render the page at codewithlove.blog/topics/{topic}
-export default async function TopicPage({ params }: TopicProps) {
+export default async function TopicPage({ params }: TopicPageProps) {
   const articlesMetaData = await getArticlesMetadata(params.topic);
 
   // using the metadata from each file in the {topic} directory, create a link for each article

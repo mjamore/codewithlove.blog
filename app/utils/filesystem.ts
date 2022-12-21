@@ -1,18 +1,11 @@
 import fs from 'fs';
 import { readdir } from 'node:fs/promises';
 import path from 'path';
-import { MDXRemoteSerializeResult } from 'next-mdx-remote';
 import matter from 'gray-matter';
 import { serialize } from 'next-mdx-remote/serialize';
 import { BLOG_POSTS_PATH } from './mdx';
 import { TOPICS } from '../utils/constants';
-
-type BlogContent = {
-  source: MDXRemoteSerializeResult;
-  frontMatter: {
-    [key: string]: any;
-  };
-};
+import { BlogContent, Topic } from '../utils/types';
 
 export const getArticleContent = async (topic: string, article: string): Promise<BlogContent> => {
   return new Promise<BlogContent>(async (resolve, reject) => {
@@ -42,12 +35,6 @@ export const getArticleContent = async (topic: string, article: string): Promise
   });
 };
 
-type Topic = {
-  directory: string;
-  friendlyName: string;
-  url: string;
-};
-
 export const getTopics = async (): Promise<Topic[]> => {
   return new Promise<Topic[]>(async (resolve, reject) => {
     try {
@@ -63,13 +50,15 @@ export const getTopics = async (): Promise<Topic[]> => {
         let topic: Topic = {
           directory: directory.name,
           url: `/topics/${directory.name}`,
-          friendlyName: directory.name
+          friendlyName: directory.name,
+          icon: ''
         };
 
-        // if the directory exists in the constants file, override the friendlyName of the topic
+        // if the directory exists in the constants file, override the topic's friendlyName and icon properties
         TOPICS.forEach((innerTopic) => {
           if (innerTopic.directory === directory.name) {
             topic.friendlyName = innerTopic.friendlyName;
+            topic.icon = innerTopic.icon;
           }
         });
 
