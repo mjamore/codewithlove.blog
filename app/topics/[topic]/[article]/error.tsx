@@ -13,7 +13,7 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
   return (
     <div>
       <p>
-        Uh oh! There isn&apos;t a blog post at this URL. Head back to the <Link href={URLS.ROUTES.BLOG_TOPIC}>blog topics page</Link> to get back on track.
+        Uh oh! There isn&apos;t a blog post at this URL. Head back to the <Link href={URLS.ROUTES.TOPICS}>blog topics page</Link> to get back on track.
       </p>
       <button onClick={() => reset()}>Reset error boundary</button>
     </div>

@@ -16,12 +16,12 @@ type BlogContent = {
 const components = {};
 
 export default async function BlogPost({ params }: any) {
-  const blogContent = await getBlogContent(params.blogTopic, params.blogArticle);
+  const blogContent = await getBlogContent(params.topic, params.article);
   console.log(`blogContent: ${JSON.stringify(blogContent.source)}`);
 
   return (
     <div>
-      <div>Note Page: {`${params.blogTopic}/${params.blogArticle}`}</div>
+      <div>Note Page: {`${params.topic}/${params.article}`}</div>
       <div className="post-header">
         <h1>{blogContent.frontMatter.title}</h1>
         {blogContent.frontMatter.description && <p className="description">{blogContent.frontMatter.description}</p>}
@@ -31,9 +31,9 @@ export default async function BlogPost({ params }: any) {
   );
 }
 
-async function getBlogContent(blogTopic: string, blogArticle: string): Promise<BlogContent> {
+async function getBlogContent(topic: string, article: string): Promise<BlogContent> {
   return new Promise<BlogContent>(async (resolve, reject) => {
-    const postFilePath = path.join(BLOG_POSTS_PATH, `${blogTopic}/${blogArticle}.mdx`);
+    const postFilePath = path.join(BLOG_POSTS_PATH, `${topic}/${article}.mdx`);
 
     if (fs.existsSync(postFilePath)) {
       // if the markdown file exists for the requested route, return the markdown content
