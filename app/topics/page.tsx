@@ -1,24 +1,15 @@
-import Link from 'next/link';
-import { TOPICS } from '../utils/constants';
+import TopicList from '../components/TopicList';
 import { getTopics } from '../utils/filesystem';
 
+// render codewithlove.blog/topics
 export default async function TopicsPage() {
+  // get a list of all topics inside of /data/blog
   const topics = await getTopics();
-
-  const Topics = TOPICS.map((topic) => {
-    return (
-      <Link href={topic.url} key={topic.directory}>
-        <li>
-          <h3>{topic.friendlyName}</h3>
-        </li>
-      </Link>
-    );
-  });
 
   return (
     <div>
       <h3>Blog Topics:</h3>
-      <ul>{Topics}</ul>
+      <TopicList topics={topics} />
     </div>
   );
 }

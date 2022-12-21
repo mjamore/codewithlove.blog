@@ -4,7 +4,6 @@ A blog for documenting my journey in the field of software engineering.
 
 ## TO-DO
 
-- Change nextjs-13 directory to nextjs
 - Add code snippets with prism
 
 ## Running Locally

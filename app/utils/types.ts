@@ -4,6 +4,7 @@ export type Topic = {
   directory: string;
   friendlyName: string;
   icon: string;
+  tagline: string;
   url: string;
 };
 

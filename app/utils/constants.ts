@@ -7,7 +7,7 @@ export const URLS = {
     ABOUT: '/about',
     TOPICS: '/topics',
     TOPIC_CSS: '/topics/css',
-    TOPIC_NEXTJS_13: '/topics/nextjs-13'
+    TOPIC_JAVASCRIPT: '/topics/javascript'
   }
 };
 
@@ -15,13 +15,15 @@ export const TOPICS: Topic[] = [
   {
     friendlyName: 'CSS',
     directory: 'css',
-    icon: '',
+    icon: '/images/blog/css/css-icon.png',
+    tagline: 'The design language of the web',
     url: URLS.ROUTES.TOPIC_CSS
   },
   {
-    friendlyName: 'Next.js 13',
-    directory: 'nextjs-13',
-    icon: '',
-    url: URLS.ROUTES.TOPIC_NEXTJS_13
+    friendlyName: 'JavaScript',
+    directory: 'javascript',
+    icon: '/images/blog/javascript/javascript-icon.png',
+    tagline: 'Any application that can be written in JavaScript, will eventually be written in JavaScript',
+    url: URLS.ROUTES.TOPIC_JAVASCRIPT
   }
 ];

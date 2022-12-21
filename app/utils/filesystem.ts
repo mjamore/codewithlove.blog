@@ -49,9 +49,10 @@ export const getTopics = async (): Promise<Topic[]> => {
         // create a new topic from the current directory
         let topic: Topic = {
           directory: directory.name,
-          url: `/topics/${directory.name}`,
           friendlyName: directory.name,
-          icon: ''
+          icon: '',
+          tagline: '',
+          url: `/topics/${directory.name}`
         };
 
         // if the directory exists in the constants file, override the topic's friendlyName and icon properties
@@ -59,6 +60,7 @@ export const getTopics = async (): Promise<Topic[]> => {
           if (innerTopic.directory === directory.name) {
             topic.friendlyName = innerTopic.friendlyName;
             topic.icon = innerTopic.icon;
+            topic.tagline = innerTopic.tagline;
           }
         });
 
