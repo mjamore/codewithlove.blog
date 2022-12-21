@@ -4,11 +4,7 @@ A blog for documenting my journey in the field of software engineering.
 
 ## TO-DO
 
-- Create navbar
-  - use mobile navbar from other project
-- Copy light/dark mode switcher from other project
-- Get Hello World .mdx file working
-  - Add code snippets with prism
+- Add code snippets with prism
 
 ## Running Locally
 
