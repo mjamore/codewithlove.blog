@@ -5,9 +5,7 @@ export const URLS = {
     ABOUT: '/about',
     TOPICS: '/topics',
     TOPIC_CSS: '/topics/css',
-    TOPIC_CSS_HOW_TO_CENTER_A_DIV: '/topics/css/how-to-center-a-div',
-    TOPIC_NEXTJS_13: '/topics/nextjs-13',
-    TOPIC_NEXTJS_13_DEPLOYING_TO_VERCEL: '/topics/css/deploying-to-vercel'
+    TOPIC_NEXTJS_13: '/topics/nextjs-13'
   }
 };
 
@@ -24,7 +22,6 @@ export type Topic = {
   directory: string;
   icon: string;
   url: string;
-  articles: Article[];
 };
 
 export const TOPICS: Topic[] = [
@@ -32,30 +29,12 @@ export const TOPICS: Topic[] = [
     friendlyName: 'CSS',
     directory: 'css',
     icon: '',
-    url: URLS.ROUTES.TOPIC_CSS,
-    articles: [
-      {
-        title: 'How to Center a Div',
-        description: '...',
-        author: 'Michael Amore',
-        url: URLS.ROUTES.TOPIC_CSS_HOW_TO_CENTER_A_DIV,
-        editedDate: '12/20/22'
-      }
-    ]
+    url: URLS.ROUTES.TOPIC_CSS
   },
   {
     friendlyName: 'Next.js 13',
     directory: 'nextjs-13',
     icon: '',
-    url: URLS.ROUTES.TOPIC_NEXTJS_13,
-    articles: [
-      {
-        title: 'Deploying to Vercel',
-        description: '...',
-        author: 'Michael Amore',
-        url: URLS.ROUTES.TOPIC_NEXTJS_13_DEPLOYING_TO_VERCEL,
-        editedDate: '12/20/22'
-      }
-    ]
+    url: URLS.ROUTES.TOPIC_NEXTJS_13
   }
 ];

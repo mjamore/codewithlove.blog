@@ -1,8 +1,16 @@
-import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
 import { BLOG_POSTS_PATH } from '../../utils/mdx';
-import { doesFileExists } from '../../utils/filesystem';
+import { readdir } from 'node:fs/promises';
+import { getArticleContent } from '../../utils/filesystem';
+
+type ArticleMetaData = {
+  title: string;
+  description: string;
+  author: string;
+  url: string;
+  editedDate: string;
+};
 
 type TopicProps = {
   params: {
@@ -10,55 +18,57 @@ type TopicProps = {
   };
 };
 
-type Article = {
-  title: string;
-  url: string;
-};
-
+// render the page at codewithlove.blog/topics/{topic}
 export default async function TopicPage({ params }: TopicProps) {
-  const articles = await getArticles(params.topic);
+  const articlesMetaData = await getArticlesMetadata(params.topic);
 
-  const Articles = articles.map((article) => {
+  // using the metadata from each file in the {topic} directory, create a link for each article
+  const Articles = articlesMetaData.map((article) => {
     return (
-      <Link href={article.url} key={article.url}>
-        <li>
+      <li key={article.url}>
+        <Link href={article.url}>
           <h3>{article.title}</h3>
-        </li>
-      </Link>
+        </Link>
+      </li>
     );
   });
 
   return (
     <div>
       <p>URL: codewithlove.blog/topics/{`${params.topic}`}</p>
-      <p>This page should:</p>
-      <ul>
-        <li>For the given topic, loop over each article and render a link to the article</li>
-        {Articles}
-      </ul>
+      <p>Articles about {params.topic}:</p>
+      <ul>{Articles}</ul>
     </div>
   );
 }
 
-async function getArticles(topic: string): Promise<Article[]> {
-  return new Promise<Article[]>(async (resolve, reject) => {
-    const topicDirectory = path.join(BLOG_POSTS_PATH, `${topic}`);
+async function getArticlesMetadata(topic: string): Promise<ArticleMetaData[]> {
+  return new Promise<ArticleMetaData[]>(async (resolve, reject) => {
+    // create an array that will hold the metadata for each file in the {topic} directory
+    let articlesMetadata: ArticleMetaData[] = [];
 
     try {
-      await doesFileExists(topicDirectory);
-      // The directory exists
+      // get an array of filenames all the files in the {topic} directory
+      const files = await readdir(path.join(BLOG_POSTS_PATH, `${topic}`));
 
-      console.log('directory exists!!');
-      const arr = [{ title: 'title', url: 'url' }];
-      resolve(arr);
+      // for each file, open it to get the frontmatter metadata, and push the metadata into the articlesMetadata array
+      for (let file of files) {
+        const articleContent = await getArticleContent(`${topic}`, `${file}`);
 
-      // get a list of files in the directory
-    } catch (error) {
-      // The check failed
-      console.log('directory does not exists :(');
+        articlesMetadata.push({
+          title: articleContent.frontMatter.title,
+          description: articleContent.frontMatter.description,
+          url: articleContent.frontMatter.url,
+          author: articleContent.frontMatter.author,
+          editedDate: articleContent.frontMatter.editedDate
+        });
+      }
 
-      const arr = [{ title: 'title', url: 'url' }];
-      reject(arr);
+      // return the array with the metadata for each file in the {topic} directory
+      resolve(articlesMetadata);
+    } catch (err) {
+      console.error(err);
+      reject(err);
     }
   });
 }

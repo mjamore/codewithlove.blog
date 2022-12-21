@@ -4,6 +4,7 @@ A blog for documenting my journey in the field of software engineering.
 
 ## TO-DO
 
+- Change nextjs-13 directory to nextjs
 - Add code snippets with prism
 
 ## Running Locally
@@ -25,3 +26,8 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Article Ideas:
+
+- JavaScript -> Using async code inside loops
+- CSS -> When to use grid vs. flexbox
