@@ -31,3 +31,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 - JavaScript -> Using async code inside loops
 - CSS -> When to use grid vs. flexbox
+- Web Security -> Understand the vulnerability when opening a new tab \_blank
+  - https://github.com/thedaviddias/Front-End-Checklist#best-practices
