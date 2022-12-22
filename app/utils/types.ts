@@ -9,16 +9,18 @@ export type Topic = {
 };
 
 export type ArticleMetaData = {
-  title: string;
-  description: string;
   author: string;
-  url: string;
+  description: string;
   editedDate: string;
+  image: string;
+  title: string;
+  topic: string;
+  url: string;
 };
 
 export type BlogContent = {
-  source: MDXRemoteSerializeResult;
   frontMatter: {
     [key: string]: any;
   };
+  source: MDXRemoteSerializeResult;
 };
