@@ -1,19 +1,23 @@
-import Image from 'next/image';
-import styles from '../page.module.css';
+import Link from 'next/link';
+import ExternalLink from './ExternalLink';
 
 export default function Footer() {
   return (
-    <footer className={styles.footer}>
-      <a
-        href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Powered by{' '}
-        <span className={styles.logo}>
-          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-        </span>
-      </a>
+    <footer className="w-full py-12 bg-gray-800">
+      <div className="max-w-5xl mx-auto flex justify-around">
+        <div className="flex flex-col space-y-4">
+          <Link href="/" className="text-gray-500 hover:text-gray-600 transition">
+            Home
+          </Link>
+          <Link href="/about" className="text-gray-500 hover:text-gray-600 transition">
+            About
+          </Link>
+        </div>
+        <div className="flex flex-col space-y-4">
+          <ExternalLink href="https://twitter.com/amore_codes">Twitter</ExternalLink>
+          <ExternalLink href="https://github.com/mjamore">GitHub</ExternalLink>
+        </div>
+      </div>
     </footer>
   );
 }

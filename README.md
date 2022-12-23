@@ -5,6 +5,10 @@ A blog for documenting my journey in the field of software engineering.
 ## TO-DO
 
 - Add code snippets with prism
+- Create "uses" page
+  - on uses.tech
+- Add resume on https://read.cv/ and add link to footer
+- look into Tailwind variables for things like background color and content width
 
 ## Running Locally
 

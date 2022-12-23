@@ -12,6 +12,7 @@ module.exports = {
     extend: {
       colors: {
         'blue-opaque': 'rgb(13 42 148 / 18%)',
+        'dark-green': 'rgba(11,30,13,0.5)',
         gray: {
           0: '#fff',
           100: '#fafafa',
