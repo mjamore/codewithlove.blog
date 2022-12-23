@@ -35,7 +35,7 @@ export default function Header() {
     <header className={cn('bg-gray-600', styles.header)}>
       <div className={'max-w-5xl flex justify-between mx-auto px-8'}>
         <Link href={URLS.ROUTES.HOME}>
-          <Image className={'mix-blend-color-burn'} alt={'Code With Love Logo'} src={'/images/logo.png'} width={100} height={100} />
+          <Image className={''} alt={'Code With Love Logo'} src={'/images/logo.png'} width={100} height={100} />
         </Link>
         <nav className="flex items-center border-gray-200 dark:border-gray-700 text-gray-900">
           <div className="ml-[-0.60rem]">

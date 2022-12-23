@@ -8,14 +8,12 @@ export default async function HomePage() {
 
   return (
     <div className={'flex flex-col'}>
-      <header className={'text-center mb-8'}>
-        <h1 className={'text-3xl text-gray-300'}>
-          When you <span className={cn('text-red-700')}>code with love</span>, you make the world a better place.
-        </h1>
-      </header>
+      <h1 className={'text-center mb-12 text-3xl'}>
+        When you <span className={cn('text-red-700')}>code with love</span>, you make the world a better place.
+      </h1>
       <main className={'my-12'}>
         <h3 className={'text-3xl'}>Recent Articles</h3>
-        <div className={'grid gap-4 md:grid-cols-2'}>
+        <div className={'grid gap-4 md:grid-cols-2 my-6'}>
           <ArticleCard
             title={centerDivBlogArticle.frontMatter.title}
             description={centerDivBlogArticle.frontMatter.description}
