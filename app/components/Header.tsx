@@ -33,7 +33,7 @@ function NavItem({ href, text }: NavItemProps) {
 export default function Header() {
   return (
     <header className={cn('bg-gray-600', styles.header)}>
-      <div className={'max-w-5xl flex justify-between mx-auto px-8'}>
+      <div className={'max-w-page flex justify-between mx-auto px-8'}>
         <Link href={URLS.ROUTES.HOME}>
           <Image className={''} alt={'Code With Love Logo'} src={'/images/logo.png'} width={100} height={100} />
         </Link>

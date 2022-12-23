@@ -14,7 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={cn('bg-[url("/images/circuit-board.svg")] bg-dark-green-transparent')}>
         <Providers>
           <Header />
-          <div className={cn('flex flex-col justify-center mx-auto w-full px-8 relative max-w-5xl')}>
+          <div className={cn('flex flex-col justify-center mx-auto w-full px-8 relative max-w-page')}>
             <main className={cn('flex flex-col min-h-screen py-16', interVariable.className)}>{children}</main>
           </div>
           <Footer />

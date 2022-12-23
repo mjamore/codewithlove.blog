@@ -9,6 +9,8 @@ A blog for documenting my journey in the field of software engineering.
   - on uses.tech
 - Add resume on https://read.cv/ and add link to footer
 - look into Tailwind variables for things like background color and content width
+- create a contact page
+- integrate with a db to store blog post view counts
 
 ## Running Locally
 

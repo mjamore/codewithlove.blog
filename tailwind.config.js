@@ -30,6 +30,9 @@ module.exports = {
       fontFamily: {
         sans: ['Inter', ...fontFamily.sans]
       },
+      maxWidth: {
+        'page': '64rem'
+      },
       typography: (theme) => ({
         DEFAULT: {
           css: {
