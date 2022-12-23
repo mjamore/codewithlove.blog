@@ -43,3 +43,10 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - My career path
 - College vs. Bootcamps vs. Self taught
 - My advice for new web developers
+- The Best Code Base Ever
+  - Strict mode,
+  - Eslint
+  - Prettier
+  - Zod
+  - TypeScript
+- GitHub Copilot experience

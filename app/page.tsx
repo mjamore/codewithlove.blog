@@ -15,6 +15,9 @@ export default async function HomePage() {
         <h3 className={'text-3xl'}>Recent Articles</h3>
         <div className={'my-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3'}>
           <ArticleCard
+            author={centerDivBlogArticle.frontMatter.author}
+            authorImage={centerDivBlogArticle.frontMatter.authorImage}
+            date={centerDivBlogArticle.frontMatter.date}
             title={centerDivBlogArticle.frontMatter.title}
             description={centerDivBlogArticle.frontMatter.description}
             image={centerDivBlogArticle.frontMatter.image}
@@ -22,6 +25,9 @@ export default async function HomePage() {
             url={centerDivBlogArticle.frontMatter.url}
           />
           <ArticleCard
+            author={centerDivBlogArticle.frontMatter.author}
+            authorImage={centerDivBlogArticle.frontMatter.authorImage}
+            date={centerDivBlogArticle.frontMatter.date}
             title={deployToVercel.frontMatter.title}
             description={deployToVercel.frontMatter.description}
             image={deployToVercel.frontMatter.image}
@@ -29,6 +35,9 @@ export default async function HomePage() {
             url={deployToVercel.frontMatter.url}
           />
           <ArticleCard
+            author={centerDivBlogArticle.frontMatter.author}
+            authorImage={centerDivBlogArticle.frontMatter.authorImage}
+            date={centerDivBlogArticle.frontMatter.date}
             title={centerDivBlogArticle.frontMatter.title}
             description={centerDivBlogArticle.frontMatter.description}
             image={centerDivBlogArticle.frontMatter.image}
