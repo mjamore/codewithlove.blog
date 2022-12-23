@@ -11,10 +11,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head />
-      <body className={cn('bg-[url("/images/circuit-board.svg")] bg-dark-green')}>
+      <body className={cn('bg-[url("/images/circuit-board.svg")] bg-dark-green-transparent')}>
         <Providers>
           <Header />
-          <div className={cn('flex flex-col justify-center mx-auto w-full px-8 relative max-w-5xl bg-gray-800')}>
+          <div className={cn('flex flex-col justify-center mx-auto w-full px-8 relative max-w-5xl')}>
             <main className={cn('flex flex-col min-h-screen py-16', interVariable.className)}>{children}</main>
           </div>
           <Footer />
