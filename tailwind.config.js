@@ -27,6 +27,9 @@ module.exports = {
           900: '#111111'
         }
       },
+      cursor: {
+        'heart': 'url(/images/red-heart.png), pointer',
+      },
       fontFamily: {
         sans: ['var(--font-inter)']
       },

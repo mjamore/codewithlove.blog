@@ -50,3 +50,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
   - Zod
   - TypeScript
 - GitHub Copilot experience
+- CSS -> Available cursor values demo
+  - inspired by https://css-tricks.com/using-css-cursors/
