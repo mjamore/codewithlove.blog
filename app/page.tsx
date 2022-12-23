@@ -13,7 +13,7 @@ export default async function HomePage() {
       </h1>
       <main className={'my-12'}>
         <h3 className={'text-3xl'}>Recent Articles</h3>
-        <div className={'grid gap-4 md:grid-cols-2 my-6'}>
+        <div className={'grid gap-4 md:grid-cols-3 my-6'}>
           <ArticleCard
             title={centerDivBlogArticle.frontMatter.title}
             description={centerDivBlogArticle.frontMatter.description}
@@ -27,6 +27,13 @@ export default async function HomePage() {
             image={deployToVercel.frontMatter.image}
             topic={deployToVercel.frontMatter.topic}
             url={deployToVercel.frontMatter.url}
+          />
+          <ArticleCard
+            title={centerDivBlogArticle.frontMatter.title}
+            description={centerDivBlogArticle.frontMatter.description}
+            image={centerDivBlogArticle.frontMatter.image}
+            topic={centerDivBlogArticle.frontMatter.topic}
+            url={centerDivBlogArticle.frontMatter.url}
           />
         </div>
       </main>
