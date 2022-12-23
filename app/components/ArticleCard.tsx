@@ -16,7 +16,7 @@ type ArticleCardProps = {
 export default function ArticleCard({ author, authorImage, date, description, image, title, topic, url }: ArticleCardProps) {
   return (
     <Link href={url} className={'rounded-md bg-white text-black'}>
-      <Image src={image} alt={'Article thumbnail image'} width={100} height={100} className={'rounded-t-md object-cover'} layout="responsive" />
+      <Image src={image} alt={'Article thumbnail image'} width={400} height={300} className={'rounded-t-md object-cover'} />
       <div className={'flex flex-col p-6'}>
         <div className={'m-3 flex'}>
           <Pill text={topic} color={'green'} />

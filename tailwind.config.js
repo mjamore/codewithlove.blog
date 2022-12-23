@@ -28,7 +28,7 @@ module.exports = {
         }
       },
       fontFamily: {
-        sans: ['Quicksand', ...fontFamily.sans]
+        sans: ['var(--font-inter)']
       },
       maxWidth: {
         'page': '64rem'
