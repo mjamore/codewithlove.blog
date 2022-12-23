@@ -1,3 +1,10 @@
+.loveText {
+  background: #E60505;
+  background: linear-gradient(to right, #E60505 0%, #A10303 100%);
+  -webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
 .footer {
   display: flex;
   flex: 1;

@@ -1,8 +1,11 @@
 import cn from 'classnames';
 import MobileMenu from './MobileMenu';
-import NextLink from 'next/link';
+import Link from 'next/link';
+import Image from 'next/image';
 import ThemeSwitcher from './ThemeSwitcher';
 // import { useRouter } from 'next/router';
+import styles from './Header.module.css';
+import { URLS } from '../utils/constants';
 
 type NavItemProps = {
   href: string;
@@ -15,7 +18,7 @@ function NavItem({ href, text }: NavItemProps) {
   const isActive = false;
 
   return (
-    <NextLink
+    <Link
       href={href}
       className={cn(
         isActive ? 'font-semibold text-gray-800 dark:text-gray-200' : 'font-normal text-gray-600 dark:text-gray-400',
@@ -23,20 +26,27 @@ function NavItem({ href, text }: NavItemProps) {
       )}
     >
       <span className="capsize">{text}</span>
-    </NextLink>
+    </Link>
   );
 }
 
 export default function Header() {
   return (
-    <nav className="flex items-center justify-between w-full relative border-gray-200 dark:border-gray-700 mx-auto pt-8 pb-8 sm:pb-16  text-gray-900">
-      <div className="ml-[-0.60rem]">
-        <MobileMenu />
-        <NavItem href="/" text="Home" />
-        <NavItem href="/topics" text="Topics" />
-        <NavItem href="/about" text="About" />
+    <header className={cn('bg-gray-600', styles.header)}>
+      <div className={'max-w-5xl flex justify-between mx-auto px-8'}>
+        <Link href={URLS.ROUTES.HOME}>
+          <Image className={'mix-blend-color-burn'} alt={'Code With Love Logo'} src={'/images/logo.png'} width={100} height={100} />
+        </Link>
+        <nav className="flex items-center border-gray-200 dark:border-gray-700 text-gray-900">
+          <div className="ml-[-0.60rem]">
+            <MobileMenu />
+            <NavItem href="/" text="Home" />
+            <NavItem href="/topics" text="Topics" />
+            <NavItem href="/about" text="About" />
+          </div>
+          {/* <ThemeSwitcher /> */}
+        </nav>
       </div>
-      <ThemeSwitcher />
-    </nav>
+    </header>
   );
 }
