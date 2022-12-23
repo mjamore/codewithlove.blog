@@ -38,10 +38,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - CSS -> When to use grid vs. flexbox
 - Web Security -> Understand the vulnerability when opening a new tab \_blank
   - https://github.com/thedaviddias/Front-End-Checklist#best-practices
-
-## App Ideas:
-
-- website to convert CSS snippet to Tailwind classes
-- text -> AI generated image website
-  - can I make money charging 5 images for $1?
-- write a message in scrabble letters and save it as an image
+- JavaScript -> var, let, const wft is the difference?
+- JavaScript -> Different Looping Options - Pros/Cons
+- My career path
+- College vs. Bootcamps vs. Self taught
+- My advice for new web developers

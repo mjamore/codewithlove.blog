@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import Pill from './Pill';
 
 type ArticleCardProps = {
   title: string;
@@ -11,13 +12,13 @@ type ArticleCardProps = {
 
 export default function ArticleCard({ title, description, image, topic, url }: ArticleCardProps) {
   return (
-    <Link href={url} className={'bg-white text-black rounded-md'}>
-      <Image src={image} alt={'Article thumbnail image'} width={100} height={100} className={'object-cover rounded-t-md'} layout="responsive" />
+    <Link href={url} className={'rounded-md bg-white text-black'}>
+      <Image src={image} alt={'Article thumbnail image'} width={100} height={100} className={'rounded-t-md object-cover'} layout="responsive" />
       <div className={'flex flex-col p-3'}>
-        <div className={'flex m-3'}>
-          <span className={'bg-green-600 py-2 px-4 rounded-full'}>{topic}</span>
+        <div className={'m-3 flex'}>
+          <Pill text={topic} color={'green'} />
         </div>
-        <h4 className={'text-2xl font-bold my-3'}>{title}</h4>
+        <h4 className={'my-3 text-2xl font-bold'}>{title}</h4>
         <p className={'max-w-prose'}>{description}</p>
       </div>
     </Link>
