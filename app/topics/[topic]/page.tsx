@@ -49,11 +49,13 @@ async function getArticlesMetadata(topic: string): Promise<ArticleMetaData[]> {
         const articleContent = await getArticleContent(`${topic}`, `${file}`);
 
         articlesMetadata.push({
-          title: articleContent.frontMatter.title,
-          description: articleContent.frontMatter.description,
-          url: articleContent.frontMatter.url,
           author: articleContent.frontMatter.author,
-          editedDate: articleContent.frontMatter.editedDate
+          description: articleContent.frontMatter.description,
+          editedDate: articleContent.frontMatter.editedDate,
+          image: articleContent.frontMatter.image,
+          title: articleContent.frontMatter.title,
+          topic: articleContent.frontMatter.topic,
+          url: articleContent.frontMatter.url
         });
       }
 
