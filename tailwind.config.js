@@ -10,6 +10,9 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      borderRadius: {
+        'articleCard': '0.75rem',
+      },
       colors: {
         'blue-opaque': 'rgb(13 42 148 / 18%)',
         'dark-green-transparent': 'rgb(12 32 14 / 90%)',

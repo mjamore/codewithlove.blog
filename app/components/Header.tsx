@@ -13,19 +13,9 @@ type NavItemProps = {
 };
 
 function NavItem({ href, text }: NavItemProps) {
-  // const router = useRouter();
-  // const isActive = router.asPath === href;
-  const isActive = false;
-
   return (
-    <Link
-      href={href}
-      className={cn(
-        isActive ? 'font-semibold text-gray-800 dark:text-gray-200' : 'font-normal text-gray-600 dark:text-gray-400',
-        'hidden rounded-lg p-1 transition-all hover:bg-gray-200 dark:hover:bg-gray-800 sm:px-3 sm:py-2 md:inline-block'
-      )}
-    >
-      <span className="capsize">{text}</span>
+    <Link href={href} className={cn('hidden rounded-lg p-1 text-gray-300 transition-all hover:text-slate-100 sm:px-3 sm:py-2 md:inline-block')}>
+      {text}
     </Link>
   );
 }
