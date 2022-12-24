@@ -22,7 +22,7 @@ function NavItem({ href, text }: NavItemProps) {
       href={href}
       className={cn(
         isActive ? 'font-semibold text-gray-800 dark:text-gray-200' : 'font-normal text-gray-600 dark:text-gray-400',
-        'hidden md:inline-block p-1 sm:px-3 sm:py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-all'
+        'hidden rounded-lg p-1 transition-all hover:bg-gray-200 dark:hover:bg-gray-800 sm:px-3 sm:py-2 md:inline-block'
       )}
     >
       <span className="capsize">{text}</span>
@@ -33,11 +33,11 @@ function NavItem({ href, text }: NavItemProps) {
 export default function Header() {
   return (
     <header className={cn('bg-gray-600', styles.header)}>
-      <div className={'max-w-page flex justify-between mx-auto px-8'}>
+      <div className={'mx-auto flex max-w-page justify-between px-8'}>
         <Link href={URLS.ROUTES.HOME}>
           <Image className={''} alt={'Code With Love Logo'} src={'/images/logo.png'} width={100} height={100} />
         </Link>
-        <nav className="flex items-center border-gray-200 dark:border-gray-700 text-gray-900">
+        <nav className="flex items-center border-gray-200 text-gray-900 dark:border-gray-700">
           <div className="ml-[-0.60rem]">
             <MobileMenu />
             <NavItem href="/" text="Home" />
