@@ -34,7 +34,10 @@ module.exports = {
         sans: ['var(--font-inter)']
       },
       maxWidth: {
-        'page': '64rem'
+        'page': '72rem'
+      },
+      scale: {
+        '101': '1.01'
       },
       typography: (theme) => ({
         DEFAULT: {
