@@ -21,6 +21,13 @@ export default function UsesPage() {
         <li>iPhone 11</li>
       </ul>
 
+      <h3>NPM Libraries</h3>
+      <ul>
+        <li>
+          <ExternalLink href='https://nextjs.org/'>Next.js</ExternalLink>
+        </li>
+      </ul>
+
       <h3>Software</h3>
       <ul>
         <li>

@@ -12,6 +12,9 @@ export default function Footer() {
           <Link href='/about' className='text-gray-500 transition hover:text-gray-600'>
             About
           </Link>
+          <Link href='/uses' className='text-gray-500 transition hover:text-gray-600'>
+            Uses
+          </Link>
         </div>
         <div className='flex flex-col space-y-4'>
           <ExternalLink href='https://twitter.com/amore_codes'>Twitter</ExternalLink>
