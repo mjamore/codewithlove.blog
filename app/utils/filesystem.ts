@@ -19,7 +19,8 @@ export const getArticleContent = async (topic: string, article: string): Promise
         // Optionally pass remark/rehype plugins
         mdxOptions: {
           remarkPlugins: [],
-          rehypePlugins: []
+          rehypePlugins: [],
+          format: 'mdx'
         },
         scope: data
       });

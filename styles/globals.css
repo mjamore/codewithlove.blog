@@ -19,17 +19,20 @@ html {
   min-height: 100vh;
 }
 
-/* https://seek-oss.github.io/capsize/ */
-.capsize::before {
-  content: '';
-  margin-bottom: -0.098em;
-  display: table;
+h1 {
+  @apply text-5xl font-bold leading-tight tracking-tight;
 }
 
-.capsize::after {
-  content: '';
-  margin-top: -0.219em;
-  display: table;
+h2 {
+  @apply text-4xl font-semibold tracking-tight;
+}
+
+h3 {
+  @apply text-3xl font-semibold tracking-tight;
+}
+
+h4 {
+  @apply text-2xl font-semibold tracking-tight;
 }
 
 .skip-nav {
