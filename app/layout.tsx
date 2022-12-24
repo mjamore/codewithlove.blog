@@ -14,10 +14,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={quicksand.className}>
       <head />
-      <body className={cn('bg-dark-green-transparent bg-[url("/images/circuit-board.svg")]')}>
+      <body className={cn('bg-content-bg bg-[url("/images/circuit-board.svg")]')}>
         <Providers>
           <Header />
-          <div className={cn('relative mx-auto flex w-full max-w-page flex-col justify-center bg-neutral-900 px-8 py-16 opacity-90')}>
+          <div className={cn('relative mx-auto flex w-full max-w-page flex-col justify-center px-8 py-16')}>
             <main className={cn('flex min-h-screen flex-col')}>{children}</main>
           </div>
           <Footer />

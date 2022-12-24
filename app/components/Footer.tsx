@@ -3,7 +3,7 @@ import ExternalLink from './ExternalLink';
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-neutral-900 py-12 px-8 opacity-90">
+    <footer className="w-full bg-neutral-900 py-12 px-8 opacity-80">
       <div className="mx-auto flex max-w-page justify-around">
         <div className="flex flex-col space-y-4">
           <Link href="/" className="text-gray-500 transition hover:text-gray-600">

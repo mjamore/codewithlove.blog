@@ -9,7 +9,7 @@ export default async function HomePage() {
   return (
     <div className={'flex flex-col'}>
       <h1 className={'mb-12 text-center text-5xl font-bold leading-tight'}>
-        When you <span className={cn('text-red-700 hover:cursor-heart')}>code with love</span>,
+        When you <span className={cn('text-amore-red hover:cursor-heart')}>code with love</span>,
         <br />
         you make the world a better place.
       </h1>

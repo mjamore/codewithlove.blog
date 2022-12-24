@@ -2,7 +2,7 @@ export default function Head() {
   const meta = {
     title: 'Michael Amore | Technologist, Software Engineer, Wannabe Hacker',
     description: `A blog about software engineering, written by Michael Amore, a software engineer in Orange County, California.`,
-    image: '/images/logo.png',
+    image: '/images/logos/logo-amore-red-white.png',
     type: 'website',
     editedDate: '12/22/2022'
   };

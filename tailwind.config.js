@@ -14,9 +14,8 @@ module.exports = {
         'articleCard': '0.75rem',
       },
       colors: {
-        'blue-opaque': 'rgb(13 42 148 / 18%)',
-        'dark-green-transparent': 'rgb(12 32 14 / 90%)',
-        'dark-green': 'rgb(12 32 14)',
+        'amore-red': '#D42622',
+        'content-bg': 'rgb(23 23 23 / 10%)',
         gray: {
           0: '#fff',
           100: '#fafafa',
