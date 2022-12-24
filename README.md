@@ -47,8 +47,11 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
   - Strict mode,
   - Eslint
   - Prettier
+  - EditorConfig
   - Zod
   - TypeScript
+  - VSCode Plugins:
+    - ...
 - GitHub Copilot experience
 - CSS -> Available cursor values demo
   - inspired by https://css-tricks.com/using-css-cursors/

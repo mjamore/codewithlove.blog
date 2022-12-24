@@ -7,11 +7,13 @@ export default async function ArticlePage({ params }: any) {
 
   return (
     <div>
-      <div className="post-header">
-        <h1 className={''}>{blogContent.frontMatter.title}</h1>
-        <p className="author">{blogContent.frontMatter.author}</p>
-        <Image src={blogContent.frontMatter.authorImage} alt={`Image of ${blogContent.frontMatter.author} image`} width={75} height={75} className={'rounded-full shadow-lg'} />
-        <p className="date">{blogContent.frontMatter.date}</p>
+      <h1 className={'mb-12'}>{blogContent.frontMatter.title}</h1>
+      <div className={'flex items-center'}>
+        <Image src={blogContent.frontMatter.authorImage} alt={`Image of ${blogContent.frontMatter.author} image`} width={35} height={35} className={'rounded-full shadow-lg'} />
+        <div className={'space-between ml-4 flex'}>
+          <span>{blogContent.frontMatter.author}</span>
+          <span>{blogContent.frontMatter.date}</span>
+        </div>
       </div>
       <h3>TLDR</h3>
       <p>{blogContent.frontMatter.description}</p>
