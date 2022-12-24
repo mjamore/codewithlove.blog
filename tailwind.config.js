@@ -16,6 +16,7 @@ module.exports = {
       colors: {
         'amore-red': '#D42622',
         'content-bg': 'rgb(23 23 23 / 10%)',
+        'content-bg2': 'rgba(18 18 18 / .9)',
         gray: {
           0: '#fff',
           100: '#fafafa',

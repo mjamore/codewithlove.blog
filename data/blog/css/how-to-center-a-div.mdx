@@ -2,84 +2,114 @@
 author: Michael Amore
 authorImage: /images/michael-amore.jpeg
 date: 12/20/2022
-description: It can be surprisingly tricky to center a div in CSS. This article explains a few of the common techniques used to center a div (or any element) both horizontally and vertically in CSS.
 image: /images/blog/css/thumb2_how-to-center-a-div.svg
+shortDescription: It can be surprisingly tricky to center a div in CSS. This article explains a few of the common techniques used to center a div (or any element) both horizontally and vertically in CSS.
+tags: [CSS, Flexbox, Grid]
 title: How to Center a div in CSS
-topic: CSS
+tldr: The fastest, simplist way is ..., but depending on your real-world needs, you may need a more in depth solution ...
 url: /topics/css/how-to-center-a-div
 ---
 
+## Intro
+
 Centering a div in CSS can be a bit tricky, especially if you are new to web development. There are several different ways to center a div, and each method has its own pros and cons. In this blog post, we will explore the different ways to center a div in CSS and provide code examples for each method. We will also discuss the pros and cons of each method to help you decide which one is best for your project.
 
-Using margin: auto
+## 1. Using margin: auto
+
 One of the most common ways to center a div is by using the margin: auto property. This method works by setting the left and right margins to auto, which evenly distributes the remaining space around the div. To center a div using this method, you can use the following code:
 
-Copy code
+```css
 div {
-width: 200px;
-margin: 0 auto;
+  width: 200px;
+  margin: 0 auto;
 }
-Pros:
+```
 
-Simple and easy to use
-Works with both block and inline elements
-Cons:
+#### Pros:
 
-Only works if the width of the element is set
-Doesn't work if the element is floated
-Using display: flex
+- Simple and easy to use
+- Works with both block and inline elements
+
+##### Cons:
+
+- Only works if the width of the element is set
+- Doesn't work if the element is floated
+
+## 2. Using display: flex
+
 Another way to center a div is by using the display: flex property. This method works by setting the parent element to display: flex and aligning the child element to the center using the align-items: center property. To center a div using this method, you can use the following code:
 
-Copy code
+```css
 .parent {
-display: flex;
-align-items: center;
-justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .child {
-width: 200px;
+  width: 200px;
 }
-Pros:
+```
 
-Flexible and can be used to center elements vertically and horizontally
-Works with both block and inline elements
-Cons:
+#### Pros:
 
-Requires the use of additional properties (align-items and justify-content)
-Not supported in older browsers
-Using text-align: center
+- Flexible and can be used to center elements vertically and horizontally
+- Works with both block and inline elements
+
+#### Cons:
+
+- Requires the use of additional properties (align-items and justify-content)
+- Not supported in older browsers
+
+## 3. Using text-align: center
+
 If you are trying to center an inline element, such as a button or a link, you can use the text-align: center property. This method works by aligning the text within the element to the center. To center an inline element using this method, you can use the following code:
 
-Copy code
+```css
 button {
-display: inline-block;
-text-align: center;
+  display: inline-block;
+  text-align: center;
 }
-Pros:
+```
 
-Simple and easy to use
-Works with inline elements
-Cons:
+#### Pros:
 
-Only works with inline elements
-Does not work with block elements
-Using position: absolute and transform: translate
+- Simple and easy to use
+- Works with inline elements
+
+#### Cons:
+
+- Only works with inline elements
+- Does not work with block elements
+
+## 4. Using position: absolute and transform: translate
+
 If you want to center an element using a more advanced method, you can use the position: absolute and transform: translate properties. This method works by setting the position of the element to absolute and using the translate function to center the element. To center a div using this method, you can use the following code:
 
-Copy code
+```css
 div {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-Pros:
+```
 
-Flexible and can be used to center elements vertically and horizontally
-Works with both block and inline elements
-Cons:
+#### Pros:
 
-Requires the use of additional properties (top, left, and transform)
-May cause issues with other elements on the page
+- Flexible and can be used to center elements vertically and horizontally
+- Works with both block and inline elements
+
+#### Cons:
+
+- Requires the use of additional properties (top, left, and transform)
+- May cause issues with other elements on the page
+
+## Wrap It Up
+
 In conclusion, there are several different ways to center a div in CSS. Each method has its own pros and cons, and it's important to choose the one that best fits your needs. Whether you want to use margin: auto
+
+## Sources
+
+- <ExternalLink href='https://css-tricks.com/centering-css-complete-guide/'>CSS-tricks.com</ExternalLink>
+- <ExternalLink href='https://openai.com/blog/chatgpt/'>ChatGPT</ExternalLink>

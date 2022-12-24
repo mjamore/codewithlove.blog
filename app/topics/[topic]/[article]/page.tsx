@@ -15,8 +15,10 @@ export default async function ArticlePage({ params }: any) {
           <span>{blogContent.frontMatter.date}</span>
         </div>
       </div>
-      <h3>TLDR</h3>
-      <p>{blogContent.frontMatter.description}</p>
+      <div className={'my-12'}>
+        <h3>TLDR</h3>
+        <p>{blogContent.frontMatter.tldr}</p>
+      </div>
       <MDX {...blogContent.source} />
     </div>
   );

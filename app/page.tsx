@@ -20,30 +20,27 @@ export default async function HomePage() {
             author={centerDivBlogArticle.frontMatter.author}
             authorImage={centerDivBlogArticle.frontMatter.authorImage}
             date={centerDivBlogArticle.frontMatter.date}
-            title={centerDivBlogArticle.frontMatter.title}
-            description={centerDivBlogArticle.frontMatter.description}
             image={centerDivBlogArticle.frontMatter.image}
-            topic={centerDivBlogArticle.frontMatter.topic}
+            shortDescription={centerDivBlogArticle.frontMatter.shortDescription}
+            title={centerDivBlogArticle.frontMatter.title}
             url={centerDivBlogArticle.frontMatter.url}
           />
           <ArticleCard
             author={centerDivBlogArticle.frontMatter.author}
             authorImage={centerDivBlogArticle.frontMatter.authorImage}
             date={centerDivBlogArticle.frontMatter.date}
-            title={deployToVercel.frontMatter.title}
-            description={deployToVercel.frontMatter.description}
             image={deployToVercel.frontMatter.image}
-            topic={deployToVercel.frontMatter.topic}
+            shortDescription={deployToVercel.frontMatter.shortDescription}
+            title={deployToVercel.frontMatter.title}
             url={deployToVercel.frontMatter.url}
           />
           <ArticleCard
             author={centerDivBlogArticle.frontMatter.author}
             authorImage={centerDivBlogArticle.frontMatter.authorImage}
             date={centerDivBlogArticle.frontMatter.date}
-            title={centerDivBlogArticle.frontMatter.title}
-            description={centerDivBlogArticle.frontMatter.description}
             image={centerDivBlogArticle.frontMatter.image}
-            topic={centerDivBlogArticle.frontMatter.topic}
+            shortDescription={centerDivBlogArticle.frontMatter.shortDescription}
+            title={centerDivBlogArticle.frontMatter.title}
             url={centerDivBlogArticle.frontMatter.url}
           />
         </div>

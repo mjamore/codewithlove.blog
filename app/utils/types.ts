@@ -10,11 +10,13 @@ export type Topic = {
 
 export type ArticleMetaData = {
   author: string;
-  description: string;
-  editedDate: string;
+  authorImage: string;
+  date: string;
   image: string;
+  shortDescription: string;
+  tags?: string[];
+  tldr?: string;
   title: string;
-  topic: string;
   url: string;
 };
 

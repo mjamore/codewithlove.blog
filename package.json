@@ -39,6 +39,7 @@
   "prettier": {
     "arrowParens": "always",
     "singleQuote": true,
+    "jsxSingleQuote": true,
     "tabWidth": 2,
     "trailingComma": "none",
     "printWidth": 180

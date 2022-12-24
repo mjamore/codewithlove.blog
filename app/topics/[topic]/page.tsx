@@ -50,11 +50,13 @@ async function getArticlesMetadata(topic: string): Promise<ArticleMetaData[]> {
 
         articlesMetadata.push({
           author: articleContent.frontMatter.author,
-          description: articleContent.frontMatter.description,
-          editedDate: articleContent.frontMatter.editedDate,
+          authorImage: articleContent.frontMatter.authorImage,
+          date: articleContent.frontMatter.date,
           image: articleContent.frontMatter.image,
+          shortDescription: articleContent.frontMatter.description,
+          tags: articleContent.frontMatter.tags,
           title: articleContent.frontMatter.title,
-          topic: articleContent.frontMatter.topic,
+          tldr: articleContent.frontMatter.tldr,
           url: articleContent.frontMatter.url
         });
       }
