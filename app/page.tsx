@@ -11,7 +11,7 @@ export default async function HomePage() {
       <h1 className={'mb-12 text-center'}>
         When you <span className={cn('text-amore-red hover:cursor-heart')}>code with love</span>,
         <br />
-        you make the world a better place.
+        you can change the world.
       </h1>
       <main className={'my-12'}>
         <h2>Recent Articles</h2>
