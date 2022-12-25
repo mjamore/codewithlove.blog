@@ -20,8 +20,8 @@ export default async function HomePage() {
             author={centerDivBlogArticle.frontMatter.author}
             authorImage={centerDivBlogArticle.frontMatter.authorImage}
             date={centerDivBlogArticle.frontMatter.date}
+            description={centerDivBlogArticle.frontMatter.description}
             image={centerDivBlogArticle.frontMatter.image}
-            shortDescription={centerDivBlogArticle.frontMatter.shortDescription}
             title={centerDivBlogArticle.frontMatter.title}
             url={centerDivBlogArticle.frontMatter.url}
           />
@@ -29,8 +29,8 @@ export default async function HomePage() {
             author={centerDivBlogArticle.frontMatter.author}
             authorImage={centerDivBlogArticle.frontMatter.authorImage}
             date={centerDivBlogArticle.frontMatter.date}
+            description={deployToVercel.frontMatter.description}
             image={deployToVercel.frontMatter.image}
-            shortDescription={deployToVercel.frontMatter.shortDescription}
             title={deployToVercel.frontMatter.title}
             url={deployToVercel.frontMatter.url}
           />
@@ -38,8 +38,8 @@ export default async function HomePage() {
             author={centerDivBlogArticle.frontMatter.author}
             authorImage={centerDivBlogArticle.frontMatter.authorImage}
             date={centerDivBlogArticle.frontMatter.date}
+            description={centerDivBlogArticle.frontMatter.description}
             image={centerDivBlogArticle.frontMatter.image}
-            shortDescription={centerDivBlogArticle.frontMatter.shortDescription}
             title={centerDivBlogArticle.frontMatter.title}
             url={centerDivBlogArticle.frontMatter.url}
           />
