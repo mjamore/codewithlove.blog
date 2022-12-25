@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArticleMetaData } from '../utils/types';
 
-export default function ArticleCard({ author, authorImage, date, image, description, title, url }: ArticleMetaData) {
+export default function ArticleCard({ author, authorImage, date, description, image, readingTime, title, url }: ArticleMetaData) {
   return (
     <Link href={url} className={'relative rounded-articleCard bg-white text-black duration-300 hover:scale-101'}>
       <Image src={image} alt={'Article thumbnail image'} width={640} height={480} className={'rounded-t-articleCard'} />
@@ -14,6 +14,7 @@ export default function ArticleCard({ author, authorImage, date, image, descript
           <div className='ml-2 flex flex-col justify-center'>
             <span className={'font-semibold'}>{author}</span>
             <span className={'text-xs'}>{date}</span>
+            <span className={'text-xs'}>{readingTime}</span>
           </div>
         </div>
       </div>

@@ -3,6 +3,9 @@ import ExternalLink from '../components/ExternalLink';
 export default function UsesPage() {
   return (
     <div>
+      <h1>Uses</h1>
+      <p>This is a list of all of the different tools and technologies that I use on a daily basis.</p>
+
       <h3>Coding</h3>
       <ul>
         <li>
@@ -37,10 +40,17 @@ export default function UsesPage() {
           Chat: <ExternalLink href='https://slack.com/'>Slack</ExternalLink>
         </li>
         <li>
-          Design: <ExternalLink href='https://vectornator.io/'>Vectornator</ExternalLink>
+          Vector Graphics: <ExternalLink href='https://vectornator.io/'>Vectornator</ExternalLink>
         </li>
         <li>
           Notes: <ExternalLink href='https://keep.google.com/'>Google Keep</ExternalLink>
+        </li>
+      </ul>
+
+      <h3>Websites</h3>
+      <ul>
+        <li>
+          <ExternalLink href='https://unsplash.com/'>Unsplash</ExternalLink>
         </li>
       </ul>
     </div>

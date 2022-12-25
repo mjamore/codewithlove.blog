@@ -1,6 +1,7 @@
+import Image from 'next/image';
 import MDX from '../../../components/MDX';
 import { getArticleContent } from '../../../utils/filesystem';
-import Image from 'next/image';
+import 'highlight.js/styles/atom-one-dark.css';
 
 export default async function ArticlePage({ params }: any) {
   const blogContent = await getArticleContent(params.topic, `${params.article}.mdx`);
@@ -14,6 +15,7 @@ export default async function ArticlePage({ params }: any) {
           <p>
             {blogContent.frontMatter.author} &#x2022; <span className={'text-sm'}>{blogContent.frontMatter.date}</span>
           </p>
+          <p>{blogContent.readingTime}</p>
         </div>
       </div>
       <MDX {...blogContent.source} />

@@ -1,8 +1,8 @@
+import { readdir } from 'node:fs/promises';
 import path from 'path';
 import Link from 'next/link';
-import { BLOG_POSTS_PATH } from '../../utils/mdx';
-import { readdir } from 'node:fs/promises';
 import { getArticleContent } from '../../utils/filesystem';
+import { BLOG_POSTS_PATH } from '../../utils/mdx';
 import { ArticleMetaData } from '../../utils/types';
 
 type TopicPageProps = {
@@ -54,6 +54,7 @@ async function getArticlesMetadata(topic: string): Promise<ArticleMetaData[]> {
           date: articleContent.frontMatter.date,
           description: articleContent.frontMatter.description,
           image: articleContent.frontMatter.image,
+          readingTime: articleContent.readingTime,
           tags: articleContent.frontMatter.tags,
           title: articleContent.frontMatter.title,
           url: articleContent.frontMatter.url

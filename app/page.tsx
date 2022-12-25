@@ -22,6 +22,7 @@ export default async function HomePage() {
             date={centerDivBlogArticle.frontMatter.date}
             description={centerDivBlogArticle.frontMatter.description}
             image={centerDivBlogArticle.frontMatter.image}
+            readingTime={centerDivBlogArticle.readingTime}
             title={centerDivBlogArticle.frontMatter.title}
             url={centerDivBlogArticle.frontMatter.url}
           />
@@ -31,6 +32,7 @@ export default async function HomePage() {
             date={centerDivBlogArticle.frontMatter.date}
             description={deployToVercel.frontMatter.description}
             image={deployToVercel.frontMatter.image}
+            readingTime={centerDivBlogArticle.readingTime}
             title={deployToVercel.frontMatter.title}
             url={deployToVercel.frontMatter.url}
           />
@@ -40,6 +42,7 @@ export default async function HomePage() {
             date={centerDivBlogArticle.frontMatter.date}
             description={centerDivBlogArticle.frontMatter.description}
             image={centerDivBlogArticle.frontMatter.image}
+            readingTime={centerDivBlogArticle.readingTime}
             title={centerDivBlogArticle.frontMatter.title}
             url={centerDivBlogArticle.frontMatter.url}
           />

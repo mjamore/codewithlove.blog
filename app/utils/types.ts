@@ -14,6 +14,7 @@ export type ArticleMetaData = {
   date: string;
   description: string;
   image: string;
+  readingTime: ReadingTime;
   tags?: string[];
   title: string;
   url: string;
@@ -23,5 +24,8 @@ export type BlogContent = {
   frontMatter: {
     [key: string]: any;
   };
+  readingTime: ReadingTime;
   source: MDXRemoteSerializeResult;
 };
+
+type ReadingTime = string;

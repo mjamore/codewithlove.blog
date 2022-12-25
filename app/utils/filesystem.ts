@@ -3,9 +3,12 @@ import { readdir } from 'node:fs/promises';
 import path from 'path';
 import matter from 'gray-matter';
 import { serialize } from 'next-mdx-remote/serialize';
-import { BLOG_POSTS_PATH } from './mdx';
+import rehypeHighlight from 'rehype-highlight';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import readingTime from 'reading-time';
 import { TOPICS } from '../utils/constants';
 import { BlogContent, Topic } from '../utils/types';
+import { BLOG_POSTS_PATH } from './mdx';
 
 export const getArticleContent = async (topic: string, article: string): Promise<BlogContent> => {
   return new Promise<BlogContent>(async (resolve, reject) => {
@@ -19,15 +22,23 @@ export const getArticleContent = async (topic: string, article: string): Promise
         // Optionally pass remark/rehype plugins
         mdxOptions: {
           remarkPlugins: [],
-          rehypePlugins: [],
+          rehypePlugins: [rehypeHighlight, [
+            rehypeAutolinkHeadings,
+            {
+              properties: {
+                className: ['anchor']
+              }
+            }
+          ]],
           format: 'mdx'
         },
         scope: data
       });
 
       resolve({
+        frontMatter: data,
+        readingTime: readingTime(content).text,
         source: mdxSource,
-        frontMatter: data
       });
     } else {
       console.log(`file DOES NOT exists`);

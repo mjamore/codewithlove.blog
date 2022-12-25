@@ -25,11 +25,16 @@
     "next-themes": "^0.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "reading-time": "^1.5.0",
+    "rehype-autolink-headings": "^6.1.1",
+    "rehype-highlight": "^6.0.0",
     "typescript": "4.9.4",
     "use-delayed-render": "^0.0.7"
   },
   "devDependencies": {
+    "@typescript-eslint/parser": "^5.47.0",
     "autoprefixer": "^10.4.13",
+    "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "postcss": "^8.4.20",
     "prettier": "^2.8.1",
@@ -38,10 +43,10 @@
   },
   "prettier": {
     "arrowParens": "always",
-    "singleQuote": true,
     "jsxSingleQuote": true,
+    "printWidth": 180,
+    "singleQuote": true,
     "tabWidth": 2,
-    "trailingComma": "none",
-    "printWidth": 180
+    "trailingComma": "none"
   }
 }
