@@ -52,11 +52,10 @@ async function getArticlesMetadata(topic: string): Promise<ArticleMetaData[]> {
           author: articleContent.frontMatter.author,
           authorImage: articleContent.frontMatter.authorImage,
           date: articleContent.frontMatter.date,
+          description: articleContent.frontMatter.description,
           image: articleContent.frontMatter.image,
-          shortDescription: articleContent.frontMatter.description,
           tags: articleContent.frontMatter.tags,
           title: articleContent.frontMatter.title,
-          tldr: articleContent.frontMatter.tldr,
           url: articleContent.frontMatter.url
         });
       }

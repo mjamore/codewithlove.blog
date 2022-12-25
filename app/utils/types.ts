@@ -12,10 +12,9 @@ export type ArticleMetaData = {
   author: string;
   authorImage: string;
   date: string;
+  description: string;
   image: string;
-  shortDescription: string;
   tags?: string[];
-  tldr?: string;
   title: string;
   url: string;
 };

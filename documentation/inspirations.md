@@ -2,6 +2,8 @@
 
 ## ArticleCard on index page
 
+https://codepen.io/lyon-etyo/pen/OJmyMGd
+
 https://freefrontend.com/css-blog-cards/
 
 Cool Ideas:
