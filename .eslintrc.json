@@ -5,13 +5,15 @@
     "plugin:react-hooks/recommended",
     "next/core-web-vitals"
   ],
-  "plugins": ["import"],
+  "plugins": ["import", "unused-imports"],
   "rules": {
     "max-len": 0,
     "import/default": 2,
     "import/no-unresolved": [2, {"commonjs": true, "amd": true}],
     "import/namespace": 2,
+    "import/no-unused-modules": 2,
     "import/order": [2, {"newlines-between": "never"}],
-    "import/export": 2
+    "import/export": 2,
+    "unused-imports/no-unused-imports": 2
   }
 }

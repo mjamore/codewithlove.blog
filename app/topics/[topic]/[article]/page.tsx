@@ -7,7 +7,7 @@ export default async function ArticlePage({ params }: any) {
   const blogContent = await getArticleContent(params.topic, `${params.article}.mdx`);
 
   return (
-    <div>
+    <div className={'max-w-prose mx-auto prose'}>
       <h1 className={'mb-3'}>{blogContent.frontMatter.title}</h1>
       <div className={'mb-20 flex items-center'}>
         <Image src={blogContent.frontMatter.authorImage} alt={`Image of ${blogContent.frontMatter.author} image`} width={35} height={35} className={'rounded-full shadow-lg'} />

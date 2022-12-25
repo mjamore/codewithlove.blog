@@ -1,9 +1,9 @@
 import { Quicksand } from '@next/font/google';
 import '../styles/globals.css';
+import cn from 'classnames';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import { Providers } from './utils/providers';
-import cn from 'classnames';
 
 const quicksand = Quicksand({
   variable: '--font-inter',

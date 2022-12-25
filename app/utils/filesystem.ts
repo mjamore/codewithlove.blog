@@ -4,6 +4,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import { serialize } from 'next-mdx-remote/serialize';
 import rehypeHighlight from 'rehype-highlight';
+import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import readingTime from 'reading-time';
 import { TOPICS } from '../utils/constants';
@@ -22,14 +23,18 @@ export const getArticleContent = async (topic: string, article: string): Promise
         // Optionally pass remark/rehype plugins
         mdxOptions: {
           remarkPlugins: [],
-          rehypePlugins: [rehypeHighlight, [
-            rehypeAutolinkHeadings,
-            {
-              properties: {
-                className: ['anchor']
+          rehypePlugins: [
+            rehypeHighlight,
+            rehypeSlug,
+            [
+              rehypeAutolinkHeadings,
+              {
+                properties: {
+                  className: ['anchor']
+                }
               }
-            }
-          ]],
+            ]
+          ],
           format: 'mdx'
         },
         scope: data
