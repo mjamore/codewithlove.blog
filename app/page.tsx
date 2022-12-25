@@ -27,12 +27,12 @@ export default async function HomePage() {
             url={centerDivBlogArticle.frontMatter.url}
           />
           <ArticleCard
-            author={centerDivBlogArticle.frontMatter.author}
-            authorImage={centerDivBlogArticle.frontMatter.authorImage}
-            date={centerDivBlogArticle.frontMatter.date}
+            author={deployToVercel.frontMatter.author}
+            authorImage={deployToVercel.frontMatter.authorImage}
+            date={deployToVercel.frontMatter.date}
             description={deployToVercel.frontMatter.description}
             image={deployToVercel.frontMatter.image}
-            readingTime={centerDivBlogArticle.readingTime}
+            readingTime={deployToVercel.readingTime}
             title={deployToVercel.frontMatter.title}
             url={deployToVercel.frontMatter.url}
           />

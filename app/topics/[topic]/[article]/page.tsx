@@ -21,8 +21,8 @@ export default async function ArticlePage({ params }: any) {
       </div>
       <MDX {...blogContent.source} />
       <h3 className={'mt-20 mb-6'}>Last Word</h3>
-      <p>We all have plenty to be grateful for in life. Take a break and think about a few things you are grateful for in your life.</p>
-      <p>Remember ... When you <span className={cn('text-amore-red hover:cursor-heart')}>code with love</span>, you can change the world.</p>
+      <p className={'my-6'}>We all have plenty to be grateful for in life. Take a break and think about a few things you are grateful for in your life.</p>
+      <p className={'my-6'}>Remember ... When you <span className={cn('text-amore-red hover:cursor-heart')}>code with love</span>, you can change the world.</p>
     </div>
   );
 }
