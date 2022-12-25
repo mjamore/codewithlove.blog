@@ -6,8 +6,8 @@
 .child {
   border: 5px solid black;
   padding: 20px;
-  background-color: #D42622;
-  color: white;
+  background-color: white;
+  font-weight: bold;
   font-family: sans-serif;
   border-radius: 5px;
 }
