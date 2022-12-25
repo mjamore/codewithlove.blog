@@ -14,7 +14,7 @@ export default async function ArticlePage({ params }: any) {
         <Image src={blogContent.frontMatter.authorImage} alt={`Image of ${blogContent.frontMatter.author} image`} width={35} height={35} className={'rounded-full shadow-lg'} />
         <div className={'ml-4 justify-between flex items-center w-full text-gray-400'}>
           <div>
-            <p>{blogContent.frontMatter.author} &#x2022; <span className={'text-sm'}>{blogContent.frontMatter.date}</span></p>
+            <span>{blogContent.frontMatter.author} &#x2022; <span className={'text-sm'}>{blogContent.frontMatter.date}</span></span>
           </div>
           <p>{blogContent.readingTime}</p>
         </div>

@@ -6,8 +6,6 @@ const components = {
   ExternalLink: (props: any) => <ExternalLink {...props} />,
   h3: (props: any) => <h3 className={'mt-20'} {...props} />,
   h5: (props: any) => <h5 className={'mt-6'} {...props} />,
-  code: (props: any) => <code className={'rounded-lg'} {...props} />,
-  p: (props: any) => <p className={'my-6'} {...props} />,
   li: (props: any) => <li className={'ml-12 list-disc'} {...props} />
 };
 
