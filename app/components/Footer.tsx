@@ -9,6 +9,9 @@ export default function Footer() {
           <Link href='/' className='text-gray-500 transition hover:text-gray-600'>
             Home
           </Link>
+          <Link href='/articles' className='text-gray-500 transition hover:text-gray-600'>
+            Articles
+          </Link>
           <Link href='/about' className='text-gray-500 transition hover:text-gray-600'>
             About
           </Link>
