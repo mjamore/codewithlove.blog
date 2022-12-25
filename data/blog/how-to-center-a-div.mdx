@@ -19,73 +19,94 @@ The optimal way to center an element in CSS will vary depending on which of the 
 
 The most universally applicable solution is Flexbox, which is detailed in option 2 below.
 
-### Option 1: `margin: auto`
+<Tip text='TIP: Find the scenario below that is applicable to your situation.' />
 
-One of the most common ways to center a div is by using the `margin: auto` property. This method works by setting the left and right margins to auto, which evenly distributes the remaining space around the div. To center a div using this method, you can use the following code:
+### Scenario 1: Aligning an Inline Element Horizontally
 
-```css
-div {
-  width: 200px;
-  margin: 0 auto;
-}
-```
+It's relatively easy to horizontally center an inline element (`a`, `code`, `button`, `input`, `label`, `select`, `span`, `textarea`, <ExternalLink href='https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements#list_of_inline_elements'>etc.</ExternalLink>). Only one CSS declaration is needed: `text-align: center`. Despite the name, this declaration will center any inline element, not just text. Here is an example in action:
 
-##### Pros:
-
-- Simple and easy to use
-- Works with both block and inline elements
-
-##### Cons:
-
-- Only works if the width of the element is set
-- Doesn't work if the element is floated
-
-### Option 2: `display: flex`
-
-Another way to center a div is by using the `display: flex` property. This method works by setting the parent element to display: flex and aligning the child element to the center using the `align-items: center` property. To center a div using this method, you can use the following code:
-
-```css
-.parent {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.child {
-  width: 200px;
-}
-```
+<iframe
+  height='300'
+  scrolling='no'
+  title='Centering - Inline Horizontal'
+  src='https://codepen.io/mjamore/embed/BaPoYQV?default-tab=css%2Cresult&editable=true'
+  loading='lazy'
+  allowtransparency='true'
+  allowfullscreen='true'
+>
+  See the Pen <a href='https://codepen.io/mjamore/pen/BaPoYQV'>Centering - Inline Horizontal</a> by Michael Amore (<a href='https://codepen.io/mjamore'>@mjamore</a>) on{' '}
+  <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ##### Pros:
 
-- Flexible and can be used to center elements vertically and horizontally
-- Works with both block and inline elements
-
-##### Cons:
-
-- Requires the use of additional properties (align-items and justify-content)
-- Not supported in older browsers
-
-### Option 3: `text-align: center`
-
-If you are trying to center an inline element, such as a button or a link, you can use the `text-align: center` property. This method works by aligning the text within the element to the center. To center an inline element using this method, you can use the following code:
-
-```css
-button {
-  display: inline-block;
-  text-align: center;
-}
-```
-
-##### Pros:
-
-- Simple and easy to use
-- Works with inline elements
+- Simple and easy to use, only 1 line of code
 
 ##### Cons:
 
 - Only works with inline elements
-- Does not work with block elements
+
+### Scenario 2: Element Width is Known And It Only Needs to be Centered Horizontally
+
+If you find yourself in this situation, consider yourself lucky because the solution is super easy: use `margin: 0 auto`. This works by setting the left and right margins to `auto`, which evenly distributes the horizonal space on either side of the div. Here is a basic example:
+
+<iframe
+  height='300'
+  scrolling='no'
+  title='Untitled'
+  src='https://codepen.io/mjamore/embed/YzjyezN?default-tab=css%2Cresult&editable=true'
+  loading='lazy'
+  allowtransparency='true'
+  allowfullscreen='true'
+>
+  See the Pen <a href='https://codepen.io/mjamore/pen/YzjyezN'>Centering - Margin: 0 auto</a> by Michael Amore (<a href='https://codepen.io/mjamore'>@mjamore</a>) on{' '}
+  <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+##### Pros:
+
+- Simple and easy to use
+- Works with both block and inline elements
+
+##### Cons:
+
+- Only centers horizontally
+- Only works if the width of the element is known (such as a fixed width image)
+- Doesn't work if the element is floated
+
+### Scenario 3: You need to Center an Element Both Horizontally and Vertically
+
+Probably the easiest way to center a div in CSS is by leveraging the power Flexbox. If you are new to Flexbox, two outstanding resources for learning how it works are <ExternalLink href='https://css-tricks.com/snippets/css/a-guide-to-flexbox/'>CSS Tricks - A Complete Guide to Flexbox</ExternalLink> and <ExternalLink href='https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/'>Josh W. Comeau's An Interactive Guide to Flexbox</ExternalLink>. The critical properties needed to center a div using Flexbox are:
+
+- `display: flex`
+- `align-items: center`
+- `justify-content: center`
+
+<iframe
+  className={'w-full'}
+  height='300'
+  scrolling='no'
+  title='Centering - Flexbox'
+  src='https://codepen.io/mjamore/embed/rNrOppo?default-tab=css%2Cresult&editable=true'
+  loading='lazy'
+  allowtransparency='true'
+  allowfullscreen='true'
+>
+  See the Pen <a href='https://codepen.io/mjamore/pen/rNrOppo'>Centering - Flexbox</a> by Michael Amore (<a href='https://codepen.io/mjamore'>@mjamore</a>) on{' '}
+  <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+As you can see, one nice benefit of this technique is that you only have to apply these 3 properties to the parent element and nothing on the child. The `align-items: center` property centers the child element vertically, and the `justify-content: center` property centers the child element horizontally (assuming `flex-direction: row`).
+
+##### Pros:
+
+- Centers elements both vertically and horizontally
+- Works with both block and inline elements
+
+##### Cons:
+
+- Requires 3 properties
+- <ExternalLink href='https://caniuse.com/?search=flexbox'>Not supported in older browsers</ExternalLink> (Less of an issue over time)
 
 ### Option 4: `position: absolute` and `transform: translate`
 
@@ -114,7 +135,7 @@ div {
 
 In conclusion, there are several different ways to center a div in CSS. Each method has its own pros and cons, and it's important to choose the one that best fits your needs. If you are looking for a simple solution, you can use the `margin: auto` property. If you are looking for a more advanced solution, you can use the `position: absolute` and `transform: translate` properties. If you are looking for a solution that works with inline elements, you can use the `text-align: center` property. If you are looking for a solution that works with both block and inline elements, you can use the `display: flex` property.
 
-### Sources
+### Sources/Inspiration
 
 - <ExternalLink href='https://css-tricks.com/centering-css-complete-guide/'>CSS-tricks.com</ExternalLink>
 - <ExternalLink href='https://openai.com/blog/chatgpt/'>ChatGPT</ExternalLink>
