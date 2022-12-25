@@ -1,11 +1,10 @@
 import cn from 'classnames';
-import MobileMenu from './MobileMenu';
 import Link from 'next/link';
 import Image from 'next/image';
-import ThemeSwitcher from './ThemeSwitcher';
+import { URLS } from '../utils/constants';
+import MobileMenu from './MobileMenu';
 // import { useRouter } from 'next/router';
 import styles from './Header.module.css';
-import { URLS } from '../utils/constants';
 
 type NavItemProps = {
   href: string;
@@ -31,7 +30,7 @@ export default function Header() {
           <div className="ml-[-0.60rem]">
             <MobileMenu />
             <NavItem href="/" text="Home" />
-            <NavItem href="/topics" text="Topics" />
+            <NavItem href="/articles" text="Articles" />
             <NavItem href="/about" text="About" />
           </div>
           {/* <ThemeSwitcher /> */}

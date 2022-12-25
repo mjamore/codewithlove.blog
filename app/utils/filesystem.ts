@@ -7,13 +7,12 @@ import rehypeHighlight from 'rehype-highlight';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import readingTime from 'reading-time';
-import { TOPICS } from '../utils/constants';
-import { BlogContent, Topic } from '../utils/types';
+import { BlogContent } from '../utils/types';
 import { BLOG_POSTS_PATH } from './mdx';
 
-export const getArticleContent = async (topic: string, article: string): Promise<BlogContent> => {
+export const getArticleContent = async (article: string): Promise<BlogContent> => {
   return new Promise<BlogContent>(async (resolve, reject) => {
-    const postFilePath = path.join(BLOG_POSTS_PATH, `${topic}/${article}`);
+    const postFilePath = path.join(BLOG_POSTS_PATH, `${article}`);
 
     if (fs.existsSync(postFilePath)) {
       // if the markdown file exists for the requested route, return the markdown content
@@ -52,44 +51,30 @@ export const getArticleContent = async (topic: string, article: string): Promise
   });
 };
 
-export const getTopics = async (): Promise<Topic[]> => {
-  return new Promise<Topic[]>(async (resolve, reject) => {
+export const getArticles = async (): Promise<BlogContent[]> => {
+  return new Promise<BlogContent[]>(async (resolve, reject) => {
     try {
-      // go to /data/blog and get a list of directories
-      const files = await readdir(BLOG_POSTS_PATH, { withFileTypes: true });
-      const directories = files.filter((file) => file.isDirectory());
+      // go to /data/blog and get a list of all articles
+      const articles = await readdir(BLOG_POSTS_PATH);
 
-      // create an array to hold the list of topics in /data/blog
-      let topics: Topic[] = [];
+      // create an array to hold the list of articles
+      let listOfArticles: BlogContent[] = [];
 
-      for (const directory of directories) {
-        // create a new topic from the current directory
-        let topic: Topic = {
-          directory: directory.name,
-          friendlyName: directory.name,
-          icon: '',
-          tagline: '',
-          url: `/topics/${directory.name}`
-        };
-
-        // if the directory exists in the constants file, override the topic's friendlyName and icon properties
-        TOPICS.forEach((innerTopic) => {
-          if (innerTopic.directory === directory.name) {
-            topic.friendlyName = innerTopic.friendlyName;
-            topic.icon = innerTopic.icon;
-            topic.tagline = innerTopic.tagline;
-          }
-        });
-
-        // add this topic to the list of topics in /data/blog
-        topics.push(topic);
+      // for each article, get the markdown content
+      for (const article of articles) {
+        const articleContent = await getArticleContent(article);
+        listOfArticles.push(articleContent);
       }
 
-      resolve(topics);
+      // sort the articles by date
+      listOfArticles.sort((a, b) => {
+        return new Date(b.frontMatter.date).getTime() - new Date(a.frontMatter.date).getTime();
+      });
+
+      resolve(listOfArticles);
     } catch (err) {
       console.error(err);
-      const response: Topic[] = [];
-      reject(response);
+      reject(err);
     }
   });
 };

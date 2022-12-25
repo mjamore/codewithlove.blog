@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import cn from 'classnames';
-import MDX from '../../../components/MDX';
-import { getArticleContent } from '../../../utils/filesystem';
+import MDX from '../../components/MDX';
+import { getArticleContent } from '../../utils/filesystem';
 import 'highlight.js/styles/atom-one-dark.css';
 
 export default async function ArticlePage({ params }: any) {
-  const blogContent = await getArticleContent(params.topic, `${params.article}.mdx`);
+  const blogContent = await getArticleContent(`${params.article}.mdx`);
 
   return (
     <div className={'max-w-prose mx-auto prose'}>

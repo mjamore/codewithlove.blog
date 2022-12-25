@@ -1,10 +1,26 @@
 import cn from 'classnames';
 import ArticleCard from './components/ArticleCard';
-import { getArticleContent } from './utils/filesystem';
+import { getArticles } from './utils/filesystem';
 
 export default async function HomePage() {
-  const centerDivBlogArticle = await getArticleContent('css', 'how-to-center-a-div.mdx');
-  const deployToVercel = await getArticleContent('javascript', 'how-to-deploy-a-nextjs-13-application-to-vercel.mdx');
+  const centerDivBlogArticle = await getArticles();
+  const firstThreeArticles = centerDivBlogArticle.slice(0, 3);
+
+  const Articles = firstThreeArticles.map((article) => {
+    return (
+      <ArticleCard
+        author={article.frontMatter.author}
+        authorImage={article.frontMatter.authorImage}
+        date={article.frontMatter.date}
+        description={article.frontMatter.description}
+        image={article.frontMatter.image}
+        readingTime={article.readingTime}
+        title={article.frontMatter.title}
+        url={article.frontMatter.url}
+        key={article.frontMatter.url}
+      />
+    )
+  });
 
   return (
     <div className={'flex flex-col'}>
@@ -16,36 +32,7 @@ export default async function HomePage() {
       <main className={'my-12'}>
         <h2>Recent Articles</h2>
         <div className={'my-6 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3'}>
-          <ArticleCard
-            author={centerDivBlogArticle.frontMatter.author}
-            authorImage={centerDivBlogArticle.frontMatter.authorImage}
-            date={centerDivBlogArticle.frontMatter.date}
-            description={centerDivBlogArticle.frontMatter.description}
-            image={centerDivBlogArticle.frontMatter.image}
-            readingTime={centerDivBlogArticle.readingTime}
-            title={centerDivBlogArticle.frontMatter.title}
-            url={centerDivBlogArticle.frontMatter.url}
-          />
-          <ArticleCard
-            author={deployToVercel.frontMatter.author}
-            authorImage={deployToVercel.frontMatter.authorImage}
-            date={deployToVercel.frontMatter.date}
-            description={deployToVercel.frontMatter.description}
-            image={deployToVercel.frontMatter.image}
-            readingTime={deployToVercel.readingTime}
-            title={deployToVercel.frontMatter.title}
-            url={deployToVercel.frontMatter.url}
-          />
-          <ArticleCard
-            author={centerDivBlogArticle.frontMatter.author}
-            authorImage={centerDivBlogArticle.frontMatter.authorImage}
-            date={centerDivBlogArticle.frontMatter.date}
-            description={centerDivBlogArticle.frontMatter.description}
-            image={centerDivBlogArticle.frontMatter.image}
-            readingTime={centerDivBlogArticle.readingTime}
-            title={centerDivBlogArticle.frontMatter.title}
-            url={centerDivBlogArticle.frontMatter.url}
-          />
+          {Articles}
         </div>
       </main>
     </div>
