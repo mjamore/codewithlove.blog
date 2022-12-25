@@ -1,16 +1,13 @@
-import Link from "next/link";
-import Image from "next/image";
+import Link from 'next/link';
 
 export default function ArticleListItem({ article }: any) {
   return (
-    <Link className={'border rounded-lg'} href={article.url}>
-      <Image src={article.image} alt={article.title} width={133} height={100} />
-      <h3>{article.title}</h3>
-      <p>{article.description}</p>
-      <span>{article.date}</span>
-      <span>{article.readingTime}</span>
-      <span>{article.author}</span>
-      <span>{article.authorImage}</span>
+    <Link className={'py-3'} href={article.frontMatter.url}>
+      <h3>{article.frontMatter.title}</h3>
+      <p className={'mt-4 mb-3'}>{article.frontMatter.description}</p>
+      <p className={'mt-0 text-sm text-gray-400'}>
+        {article.frontMatter.date} &#x2022; {article.readingTime}
+      </p>
     </Link>
   );
 }

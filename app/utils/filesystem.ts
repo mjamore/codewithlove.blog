@@ -10,7 +10,7 @@ import readingTime from 'reading-time';
 import { BlogContent } from '../utils/types';
 import { BLOG_POSTS_PATH } from './mdx';
 
-export const getArticleContent = async (article: string): Promise<BlogContent> => {
+export const getArticle = async (article: string): Promise<BlogContent> => {
   return new Promise<BlogContent>(async (resolve, reject) => {
     const postFilePath = path.join(BLOG_POSTS_PATH, `${article}`);
 
@@ -29,14 +29,14 @@ export const getArticleContent = async (article: string): Promise<BlogContent> =
               rehypeAutolinkHeadings,
               {
                 properties: {
-                  className: ['anchor']
-                }
-              }
-            ]
+                  className: ['anchor'],
+                },
+              },
+            ],
           ],
-          format: 'mdx'
+          format: 'mdx',
         },
-        scope: data
+        scope: data,
       });
 
       resolve({
@@ -62,7 +62,7 @@ export const getArticles = async (): Promise<BlogContent[]> => {
 
       // for each article, get the markdown content
       for (const article of articles) {
-        const articleContent = await getArticleContent(article);
+        const articleContent = await getArticle(article);
         listOfArticles.push(articleContent);
       }
 

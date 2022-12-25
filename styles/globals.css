@@ -40,7 +40,7 @@ h5 {
 }
 
 p {
-  @apply my-6;
+  @apply my-6 text-lg;
 }
 
 .skip-nav {

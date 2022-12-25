@@ -7,14 +7,12 @@ export default async function ArticlesPage() {
   const articles = await getArticles();
 
   // map over the articles and create a new ArticleListItem component for each one
-  const Articles = articles.map((article) => <ArticleListItem article={article.frontMatter} key={article.frontMatter.url} /> );
+  const Articles = articles.map((article) => <ArticleListItem article={article} key={article.frontMatter.url} />);
 
   return (
-    <div>
-      <h1 className={'mb-3'}>Blog Articles:</h1>
-      <div className={'grid grid-cols-1 gap-8'}>
-        {Articles}
-      </div>
+    <div className={'prose mx-auto max-w-prose'}>
+      <h1 className={'mb-12'}>Articles:</h1>
+      <div className={'grid grid-cols-1 gap-8'}>{Articles}</div>
     </div>
   );
 }
