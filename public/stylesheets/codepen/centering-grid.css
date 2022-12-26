@@ -1,0 +1,13 @@
+.parent {
+  background-color: #D42622;
+  height: 100vh;
+}
+
+.child {
+  border: 5px solid black;
+  padding: 20px;
+  background-color: white;
+  font-weight: bold;
+  font-family: sans-serif;
+  border-radius: 5px;
+}

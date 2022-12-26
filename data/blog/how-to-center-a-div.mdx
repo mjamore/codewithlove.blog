@@ -48,7 +48,7 @@ It's relatively easy to horizontally center an inline element (`a`, `code`, `but
 
 ### Scenario 2: Element Width is Known And It Only Needs to be Centered Horizontally
 
-If you find yourself in this situation, consider yourself lucky because the solution is super easy: use `margin: 0 auto`. This works by setting the left and right margins to `auto`, which evenly distributes the horizonal space on either side of the div. Here is a basic example:
+If you find yourself in this situation, consider yourself lucky because the solution is super easy: use `margin: 0 auto`. This works by setting the left and right margins to `auto`, which evenly distributes the horizontal space on either side of the div. Here is a basic example:
 
 <iframe
   height='300'
@@ -76,7 +76,9 @@ If you find yourself in this situation, consider yourself lucky because the solu
 
 ### Scenario 3: You need to Center an Element Both Horizontally and Vertically
 
-Probably the easiest way to center a div in CSS is by leveraging the power Flexbox. If you are new to Flexbox, two outstanding resources for learning how it works are <ExternalLink href='https://css-tricks.com/snippets/css/a-guide-to-flexbox/'>CSS Tricks - A Complete Guide to Flexbox</ExternalLink> and <ExternalLink href='https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/'>Josh W. Comeau's An Interactive Guide to Flexbox</ExternalLink>. There are three critical CSS declarations required on the parent element that are needed to center a child element(s) using Flexbox, which are: `display: flex`, `align-items: center`, and `justify-content: center`. Here is an example on CodePen:
+#### Flexbox
+
+Probably the easiest way to center a div in CSS is by leveraging the power Flexbox. If you are new to Flexbox, two outstanding resources for learning how it works are <ExternalLink href='https://css-tricks.com/snippets/css/a-guide-to-flexbox/'>A Complete Guide to Flexbox</ExternalLink> and Josh W. Comeau's <ExternalLink href='https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/'>An Interactive Guide to Flexbox</ExternalLink>. There are three critical CSS declarations required on the parent element in order to center a child element(s) using Flexbox, which are: `display: flex`, `align-items: center`, and `justify-content: center`. Here is an example on CodePen:
 
 <iframe
   className={'iframe-with-disclaimer w-full'}
@@ -93,7 +95,7 @@ Probably the easiest way to center a div in CSS is by leveraging the power Flexb
 </iframe>
 <span class='iframe-disclaimer'>**Note:** There is additional styling being loaded in this example. The only relevant CSS is displayed for demonstration purposes.</span>
 
-As you can see, there are some nices benefits to this approach. For one, it only requires adding CSS to the parent element. You don't have to modify the child elements at all. On the other hand, other solutions were a single line, whereas this solution requires _3 whole properties_. `align-items: center` and `justify-content: center` are responsible for centering the child element(s) vertically and horizonally. This is an all around good option.
+As you can see, there are some nice benefits to this approach. For one, it only requires adding CSS to the parent element. You don't have to modify the child elements at all. On the other hand, other solutions were a single line, whereas this solution requires _3 whole properties_. `align-items: center` and `justify-content: center` are responsible for centering the child element(s) vertically and horizontally. This option covers both scenarios 1 and 2, making this a solid go-to option.
 
 ##### Pros:
 
@@ -105,7 +107,11 @@ As you can see, there are some nices benefits to this approach. For one, it only
 - Requires 3 properties
 - <ExternalLink href='https://caniuse.com/?search=flexbox'>Not supported in older browsers</ExternalLink> (Shouldn't really be much of an issue anymore)
 
-### Option 4: `position: absolute` and `transform: translate`
+#### Grid
+
+There are a couple different ways to center a child element using CSS Grid, but my favorite is using the place-items CSS property. This property is a shorthand for `align-items` and `justify-items`. Here is an example:
+
+### If you have no other options...
 
 If you want to center an element using a more advanced method, you can use the `position: absolute` and `transform: translate` properties. This method works by setting the position of the element to absolute and using the translate function to center the element. To center a div using this method, you can use the following code:
 
@@ -130,9 +136,22 @@ div {
 
 ### Wrap It Up
 
-In conclusion, there are several different ways to center a div in CSS. Each method has its own pros and cons, and it's important to choose the one that best fits your needs. If you are looking for a simple solution, you can use the `margin: auto` property. If you are looking for a more advanced solution, you can use the `position: absolute` and `transform: translate` properties. If you are looking for a solution that works with inline elements, you can use the `text-align: center` property. If you are looking for a solution that works with both block and inline elements, you can use the `display: flex` property.
+Did you know that centering a div in CSS used to be considered so difficult that it was often asked as an ice breaker question during job interviews to make both parties laugh? It's true.
 
-### Sources/Inspiration
+Now you know that in the right scenarios, there are simple one or two liners that solve problem and we are lucky enough these days to have Flexbox and CSS grid to handle even the most demanding of div centering needs. Each method has its own pros and cons, and it's important to choose the one that best fits your needs. If you are looking for a simple solution, you can use the `margin: auto` property. If you are looking for a more advanced solution, you can use the `position: absolute` and `transform: translate` properties. If you are looking for a solution that works with inline elements, you can use the `text-align: center` property. If you are looking for a solution that works with both block and inline elements, you can use the `display: flex` property.
 
-- <ExternalLink href='https://css-tricks.com/centering-css-complete-guide/'>CSS-tricks.com</ExternalLink>
-- <ExternalLink href='https://openai.com/blog/chatgpt/'>ChatGPT</ExternalLink>
+<PartingWords />
+
+### Sources and Inspiration for this Article
+
+<ul className='sources'>
+  <li>
+    <ExternalLink href='https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element'>MDN Center an element</ExternalLink>
+  </li>
+  <li>
+    <ExternalLink href='https://css-tricks.com/centering-css-complete-guide/'>Centering in CSS: A Complete Guide</ExternalLink>
+  </li>
+  <li>
+    <ExternalLink href='https://openai.com/blog/chatgpt/'>ChatGPT</ExternalLink>
+  </li>
+</ul>
