@@ -227,10 +227,19 @@ table {
   margin: 0 !important;
 }
 
-.sources {
-  @apply mt-3;
+.external-link {
+  @apply text-gray-500 transition hover:text-gray-200;
 }
 
-.sources li {
-  @apply ml-12 list-disc;
+.internal-link {
+  @apply font-semibold text-amore-red transition duration-500 hover:text-gray-200;
 }
+
+.link {
+  @apply font-semibold text-amore-red transition duration-500 hover:text-gray-200;
+}
+
+footer .link {
+  @apply text-gray-500 transition duration-500 hover:text-gray-200;
+}
+

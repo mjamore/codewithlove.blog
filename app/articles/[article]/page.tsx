@@ -2,6 +2,7 @@ import Image from 'next/image';
 import MDX from '../../components/MDX';
 import { getArticle } from '../../utils/filesystem';
 import 'highlight.js/styles/atom-one-dark.css';
+import '../../../styles/article.css';
 
 export default async function ArticlePage({ params }: any) {
   const blogContent = await getArticle(`${params.article}.mdx`);

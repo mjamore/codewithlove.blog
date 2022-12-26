@@ -1,0 +1,7 @@
+.sources {
+  @apply mt-3;
+}
+
+.sources li {
+  @apply ml-12 list-disc;
+}

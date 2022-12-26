@@ -1,23 +1,15 @@
-import Link from 'next/link';
 import ExternalLink from './ExternalLink';
+import InternalLink from './InternalLink';
 
 export default function Footer() {
   return (
     <footer className='w-full bg-content-bg2 py-12 px-8'>
       <div className='mx-auto flex max-w-page justify-around'>
         <div className='flex flex-col space-y-4'>
-          <Link href='/' className='text-gray-500 transition hover:text-gray-600'>
-            Home
-          </Link>
-          <Link href='/articles' className='text-gray-500 transition hover:text-gray-600'>
-            Articles
-          </Link>
-          <Link href='/about' className='text-gray-500 transition hover:text-gray-600'>
-            About
-          </Link>
-          <Link href='/uses' className='text-gray-500 transition hover:text-gray-600'>
-            Uses
-          </Link>
+          <InternalLink href='/'>Home</InternalLink>
+          <InternalLink href='/articles'>Articles</InternalLink>
+          <InternalLink href='/about'>About</InternalLink>
+          <InternalLink href='/uses'>Uses</InternalLink>
         </div>
         <div className='flex flex-col space-y-4'>
           <ExternalLink href='https://twitter.com/amore_codes'>Twitter</ExternalLink>
