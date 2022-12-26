@@ -9,7 +9,7 @@ const components = {
   PartingWords: (props: any) => <PartingWords {...props} />,
   Tip: (props: any) => <Tip {...props} />,
   h3: (props: any) => <h3 className={'mt-28'} {...props} />,
-  h4: (props: any) => <h4 className={'mt-6'} {...props} />,
+  h4: (props: any) => <h4 className={'mt-12'} {...props} />,
   h5: (props: any) => <h5 className={'mt-6 mb-3'} {...props} />,
   li: (props: any) => <li className={'ml-12 list-disc'} {...props} />,
 };
