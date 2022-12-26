@@ -76,14 +76,10 @@ If you find yourself in this situation, consider yourself lucky because the solu
 
 ### Scenario 3: You need to Center an Element Both Horizontally and Vertically
 
-Probably the easiest way to center a div in CSS is by leveraging the power Flexbox. If you are new to Flexbox, two outstanding resources for learning how it works are <ExternalLink href='https://css-tricks.com/snippets/css/a-guide-to-flexbox/'>CSS Tricks - A Complete Guide to Flexbox</ExternalLink> and <ExternalLink href='https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/'>Josh W. Comeau's An Interactive Guide to Flexbox</ExternalLink>. The critical properties needed to center a div using Flexbox are:
-
-- `display: flex`
-- `align-items: center`
-- `justify-content: center`
+Probably the easiest way to center a div in CSS is by leveraging the power Flexbox. If you are new to Flexbox, two outstanding resources for learning how it works are <ExternalLink href='https://css-tricks.com/snippets/css/a-guide-to-flexbox/'>CSS Tricks - A Complete Guide to Flexbox</ExternalLink> and <ExternalLink href='https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/'>Josh W. Comeau's An Interactive Guide to Flexbox</ExternalLink>. There are three critical CSS declarations required on the parent element that are needed to center a child element(s) using Flexbox, which are: `display: flex`, `align-items: center`, and `justify-content: center`. Here is an example on CodePen:
 
 <iframe
-  className={'w-full'}
+  className={'iframe-with-disclaimer w-full'}
   height='300'
   scrolling='no'
   title='Centering - Flexbox'
@@ -95,8 +91,9 @@ Probably the easiest way to center a div in CSS is by leveraging the power Flexb
   See the Pen <a href='https://codepen.io/mjamore/pen/rNrOppo'>Centering - Flexbox</a> by Michael Amore (<a href='https://codepen.io/mjamore'>@mjamore</a>) on{' '}
   <a href='https://codepen.io'>CodePen</a>.
 </iframe>
+<span class='iframe-disclaimer'>**Note:** There is additional styling being loaded in this example. The only relevant CSS is displayed for demonstration purposes.</span>
 
-As you can see, one nice benefit of this technique is that you only have to apply these 3 properties to the parent element and nothing on the child. The `align-items: center` property centers the child element vertically, and the `justify-content: center` property centers the child element horizontally (assuming `flex-direction: row`).
+As you can see, there are some nices benefits to this approach. For one, it only requires adding CSS to the parent element. You don't have to modify the child elements at all. On the other hand, other solutions were a single line, whereas this solution requires _3 whole properties_. `align-items: center` and `justify-content: center` are responsible for centering the child element(s) vertically and horizonally. This is an all around good option.
 
 ##### Pros:
 
@@ -106,7 +103,7 @@ As you can see, one nice benefit of this technique is that you only have to appl
 ##### Cons:
 
 - Requires 3 properties
-- <ExternalLink href='https://caniuse.com/?search=flexbox'>Not supported in older browsers</ExternalLink> (Less of an issue over time)
+- <ExternalLink href='https://caniuse.com/?search=flexbox'>Not supported in older browsers</ExternalLink> (Shouldn't really be much of an issue anymore)
 
 ### Option 4: `position: absolute` and `transform: translate`
 
