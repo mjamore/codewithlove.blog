@@ -243,3 +243,7 @@ footer .link {
   @apply text-gray-500 transition duration-500 hover:text-gray-200;
 }
 
+.prose-content {
+  @apply prose mx-auto max-w-prose;
+}
+

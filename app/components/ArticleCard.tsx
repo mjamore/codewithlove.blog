@@ -8,7 +8,7 @@ export default function ArticleCard({ author, authorImage, date, description, im
       <Image src={image} alt={'Article thumbnail image'} width={640} height={480} className={'rounded-t-articleCard'} />
       <div className={'flex flex-col p-6'}>
         <h4 className={'mb-3'}>{title}</h4>
-        <p className={'my-0 max-w-prose'}>{description}</p>
+        <p className={'my-0 leading-6'}>{description}</p>
         <div className='mt-6 flex'>
           <Image src={authorImage} alt={`Image of ${author} image`} width={75} height={75} className={'rounded-full shadow-lg'} />
           <div className='ml-2 flex flex-col justify-center'>

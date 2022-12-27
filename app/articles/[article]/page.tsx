@@ -8,7 +8,7 @@ export default async function ArticlePage({ params }: any) {
   const blogContent = await getArticle(`${params.article}.mdx`);
 
   return (
-    <div className={'prose mx-auto max-w-prose'}>
+    <div className={'prose-content'}>
       {/* Article Title */}
       <h1 className={'mb-3'}>{blogContent.frontMatter.title}</h1>
 

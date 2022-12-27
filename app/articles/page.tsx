@@ -10,7 +10,7 @@ export default async function ArticlesPage() {
   const Articles = articles.map((article) => <ArticleListItem article={article} key={article.frontMatter.url} />);
 
   return (
-    <div className={'prose mx-auto max-w-prose'}>
+    <div className={'prose-content'}>
       <h1 className={'mb-12'}>Articles:</h1>
       <div className={'grid grid-cols-1 gap-8'}>{Articles}</div>
     </div>
