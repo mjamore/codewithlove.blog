@@ -4,7 +4,7 @@ import InternalLink from './InternalLink';
 export default function Footer() {
   return (
     <footer className='w-full bg-content-bg2 py-12 px-8'>
-      <div className='mx-auto flex max-w-page justify-around'>
+      <div className='mx-auto flex max-w-wide justify-around'>
         <div className='flex flex-col space-y-4'>
           <InternalLink href='/'>Home</InternalLink>
           <InternalLink href='/articles'>Articles</InternalLink>

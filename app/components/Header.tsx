@@ -22,16 +22,16 @@ function NavItem({ href, text }: NavItemProps) {
 export default function Header() {
   return (
     <header className={styles.header}>
-      <div className={'mx-auto flex max-w-page justify-between px-8'}>
+      <div className={'mx-auto flex max-w-wide justify-between px-8'}>
         <Link href={URLS.ROUTES.HOME}>
           <Image className={''} alt={'Code With Love Logo'} src={'/images/logos/logo-amore-red-white.png'} width={100} height={100} />
         </Link>
-        <nav className="flex items-center border-gray-200 text-gray-900 dark:border-gray-700">
-          <div className="ml-[-0.60rem]">
+        <nav className='flex items-center border-gray-200 text-gray-900 dark:border-gray-700'>
+          <div className='ml-[-0.60rem]'>
             <MobileMenu />
-            <NavItem href="/" text="Home" />
-            <NavItem href="/articles" text="Articles" />
-            <NavItem href="/about" text="About" />
+            <NavItem href='/' text='Home' />
+            <NavItem href='/articles' text='Articles' />
+            <NavItem href='/about' text='About' />
           </div>
           {/* <ThemeSwitcher /> */}
         </nav>

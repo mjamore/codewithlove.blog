@@ -46,7 +46,7 @@ It's relatively easy to horizontally center an inline element (`a`, `code`, `but
 
 - Only works with inline elements
 
-### Scenario 2: Element Width is Known And It Only Needs to be Centered Horizontally
+### Scenario 2: Child Element Width is Known And Only Needs to be Centered Horizontally
 
 If you find yourself in this situation, consider yourself lucky because the solution is super easy: use `margin: 0 auto`. This works by setting the left and right margins to `auto`, which evenly distributes the horizontal space on either side of the div. Here is a basic example:
 
@@ -137,9 +137,9 @@ As you can see, there are some nice benefits to this approach. For one, it only 
 - Requires 3 properties
 - <ExternalLink href='https://caniuse.com/?search=flexbox'>Not supported in older browsers</ExternalLink> (Shouldn't really be much of an issue anymore)
 
-### If you have no other options...
+### Scenario 4: If None of the Above Options Work...
 
-The last resort option I would choose is using `position: absolute` and the `transform: translate` property. This method requires the parent element to have `position: static` (<ExternalLink href="https://developer.mozilla.org/en-US/docs/Web/CSS/position#values">which it should be by default</ExternalLink>) or `position: relative`, then setting the child element to `position: absolute`, as well as setting the `top`, `left`, and `transform` properties, as seen in this example:
+The last resort option I would choose is using `position: absolute` and the `transform: translate` property. This method requires the parent element to have `position: static` (<ExternalLink href="https://developer.mozilla.org/en-US/docs/Web/CSS/position#values">which it is by default</ExternalLink>) or `position: relative`, then setting the child element to `position: absolute`, as well as setting the `top`, `left`, and `transform` properties, as seen in this example:
 
 <iframe
   height='300'
@@ -170,11 +170,11 @@ The last resort option I would choose is using `position: absolute` and the `tra
 
 ### Wrap It Up
 
-The inspiration for this article is the old joke that you're likely familiar with about how difficult it is to center a div in CSS (hence the name of this article). Before CSS Grid and Flexbox came along, centering an element vertically was often achieved using the `position: absolute` and the `transform: translate` property method discussed in the "If you have no other options..." section above. And before `transform: translate` came along, the `position: absolute` method was even more complicated. So it's understandable why the joke existed.
+The inspiration for this article is the old joke that you're likely familiar with about how difficult it is to center a div in CSS (hence the name of this article). Before CSS Grid and Flexbox came along, centering an element vertically was often achieved using the `position: absolute` and the `transform: translate` property method discussed in the "If None of the Above Options Work..." section above. And before `transform: translate` came along, the `position: absolute` method was even more complicated. So it's understandable why the joke existed.
 
-But times have changed. These days we have powerful CSS properties like CSS Grid and Flexbox, which make centering elements, both horizontally and vertically, pretty trivial.
+But times have changed. These days we have powerful CSS properties like CSS Grid and Flexbox, which make centering elements, both horizontally and vertically, rather trivial.
 
-The way I see it is if you just need to center an inline element horizontally, go with the `text-align: center` option. For all other scenarios, CSS Grid or Flexbox should almost always work.
+The way I see it, if you just need to center an inline element horizontally, go with the `text-align: center` option. For all other scenarios, CSS Grid or Flexbox should almost always work.
 
 <CodeWithLove />
 

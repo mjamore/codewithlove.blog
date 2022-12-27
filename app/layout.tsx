@@ -7,7 +7,7 @@ import { Providers } from './utils/providers';
 
 const quicksand = Quicksand({
   variable: '--font-inter',
-  subsets: ['latin']
+  subsets: ['latin'],
 });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -18,7 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Providers>
           <Header />
           <div className={'bg-content-bg2'}>
-            <div className={cn('relative mx-auto flex w-full max-w-page flex-col justify-center px-8 py-16')}>
+            <div className={cn('relative mx-auto flex w-full max-w-wide flex-col justify-center px-8 pb-28')}>
               <main className={cn('flex min-h-screen flex-col')}>{children}</main>
             </div>
           </div>

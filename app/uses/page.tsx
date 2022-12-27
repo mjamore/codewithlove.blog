@@ -2,9 +2,11 @@ import ExternalLink from '../components/ExternalLink';
 
 export default function UsesPage() {
   return (
-    <div>
+    <div className={'prose-content'}>
       <h1>Uses</h1>
-      <p>This is a list of all of the different tools and technologies that I use on a daily basis.</p>
+      <p>
+        A simple list of all of the different tools and technologies that I use on a daily basis, as seen on <ExternalLink href='https://uses.tech'>uses.tech</ExternalLink>.
+      </p>
 
       <h3>Coding</h3>
       <ul>
@@ -20,7 +22,7 @@ export default function UsesPage() {
 
       <h3>Hardware</h3>
       <ul>
-        <li>Macbook Pro (2021) on macOS Ventura</li>
+        <li>MacBook Pro (2021) on macOS Ventura</li>
         <li>iPhone 11</li>
       </ul>
 

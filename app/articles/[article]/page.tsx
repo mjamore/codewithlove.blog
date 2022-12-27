@@ -10,10 +10,10 @@ export default async function ArticlePage({ params }: any) {
   return (
     <div className={'prose-content'}>
       {/* Article Title */}
-      <h1 className={'mb-3'}>{blogContent.frontMatter.title}</h1>
+      <h1 className={'mb-0'}>{blogContent.frontMatter.title}</h1>
 
       {/* Article Metadata */}
-      <div className={'mb-20 flex items-center'}>
+      <div className={'flex items-center'}>
         <Image src={blogContent.frontMatter.authorImage} alt={`Image of ${blogContent.frontMatter.author} image`} width={35} height={35} className={'rounded-full shadow-lg'} />
         <div className={'ml-4 flex w-full items-center justify-between text-gray-400'}>
           <div>
