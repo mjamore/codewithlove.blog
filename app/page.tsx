@@ -1,4 +1,3 @@
-import cn from 'classnames';
 import ArticleCard from './components/ArticleCard';
 import { getArticles } from './utils/filesystem';
 
@@ -25,7 +24,7 @@ export default async function HomePage() {
   return (
     <div className={'flex flex-col'}>
       <h1 className={'mb-12 text-center'}>
-        When you <span className={cn('text-amore-red hover:cursor-heart')}>code with love</span>,
+        When you <span className={'code-with-love-text'}>code with love</span>,
         <br />
         you can change the world.
       </h1>

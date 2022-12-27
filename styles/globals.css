@@ -246,3 +246,11 @@ footer .link {
 .prose-content {
   @apply prose mx-auto max-w-prose;
 }
+
+.code-with-love-text {
+  @apply text-amore-red hover:cursor-heart;
+}
+
+.image-grid {
+  @apply my-12 grid grid-cols-1 items-center gap-8 sm:grid-cols-2;
+}
