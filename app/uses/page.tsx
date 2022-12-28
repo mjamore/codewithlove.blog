@@ -49,6 +49,21 @@ export default function UsesPage() {
         </li>
       </ul>
 
+      <h3>AI</h3>
+      <h5>Image Generation</h5>
+      <ul>
+        <li>
+          <ExternalLink href='https://lexica.art/aperture'>Lexica</ExternalLink>
+        </li>
+      </ul>
+
+      <h5>APIs</h5>
+      <ul>
+        <li>
+          <ExternalLink href='https://beta.openai.com/docs/introduction'>OpenAI</ExternalLink>
+        </li>
+      </ul>
+
       <h3>Websites</h3>
       <ul>
         <li>

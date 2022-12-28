@@ -12,11 +12,7 @@ export default function AboutPage() {
         care, while promoting love and peace to make the world a better place.
       </p>
 
-      <div className={'image-grid'}>
-        <Image src={'/images/about/jane-closeup.jpg'} alt={'Jane the Dachshund'} width={650} height={650} />
-        <Image src={'/images/about/buster.jpg'} alt={'Buster the Chihuahua'} width={650} height={650} />
-      </div>
-
+      <h3>Our Fortune</h3>
       <p>
         If the only jobs you have ever experienced are sitting behind a computer, then it is hard to appreciate how fortunate we are to get to write code for a living. It is fun,
         challenging, fulfilling, and magical. And we get paid to do it.
@@ -31,6 +27,11 @@ export default function AboutPage() {
         Others are not as fortunate. Our lives and the lives of those around us are greatly improved when we take time to be grateful for the simple things in life. After all, the
         simple parts of life are what make being alive great.
       </p>
+
+      <div className={'image-grid'}>
+        <Image src={'/images/about/jane-closeup.jpg'} alt={'Jane the Dachshund'} width={650} height={650} />
+        <Image src={'/images/about/buster.jpg'} alt={'Buster the Chihuahua'} width={650} height={650} />
+      </div>
     </div>
   );
 }
