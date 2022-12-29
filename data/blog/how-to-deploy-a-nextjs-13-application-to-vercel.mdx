@@ -23,18 +23,7 @@ Vercel is the company that funds the development of Next.js and one of the core 
 
 <Image class='bordered-img' src='/images/blog/deploy-to-vercel/vercel-framework-support.jpg' alt='Frameworks supported by Vercel' width={700} height={100} />
 
-### Start a New Next.js Project and Push it to Your GitHub Account
-
-There are a few ways to get started with a Next.js application. You can fork the git repo of an existing <ExternalLink href='https://vercel.com/templates'>
-Next.js template</ExternalLink> or you can create a new NextJS application using:
-
-```bash
-npx create-next-app@latest --typescript
-```
-
-If you create a new Next.js application, you'll need initialize a new git repository (`git init`) and push it to your GitHub account.
-
-### Connect Vercel to Your Git Repository
+### Step 1: Log into Vercel and Create a New Project
 
 If you don't already have a Vercel account, <ExternalLink href='https://vercel.com/signup'>create one</ExternalLink>. It's free (no credit card required) and they provide you with free, scalable cloud infrastructure. You have nothing to lose.
 
@@ -43,13 +32,37 @@ and then selecting the "Project" option.
 
 <Image class='bordered-img' src='/images/blog/deploy-to-vercel/new-vercel-project-closeup.jpg' alt='How to create a new Vercel project' width={700} height={100} />
 
-1. Buy a domain
+### Step 2: Connect Vercel to an Existing GitHub Repository or Create a New Project
 
-- [Namecheap](https://namecheap.com)
+From there, you can either choose an existing repository from your GitHub account account, or a start a new Next.js project from one on the many starter templates they have available. In the past, I've always started a new project at the command line with something like `npx create-next-app ...`, but I prefer this method of starting my project from the Vercel website because it takes care of some of the initial setup for me.
 
-2. Create a NextJS application and push it to Github
-3. Configure Vercel to be able to access your Git repo.
-4. Configure DNS for your custom domain to point to Vercel servers
-5. Access your site on your custom domain (with http -> https redirect)
+<Image class='bordered-img' src='/images/blog/deploy-to-vercel/new-next-project.jpg' alt='Create a new Next.js project' width={700} height={100} />
 
-![Namecheap DNS Configuration](/images/blog/namecheap-configuration.jpg)
+On the next page, if you are creating a new project from a Vercel template, give your repository and click "Create".
+
+<Image class='bordered-img' src='/images/blog/deploy-to-vercel/name-repository.jpg' alt='Name your new project' width={700} height={100} />
+
+### Step 3: Deployment (Sit Back and Watch)
+
+Vercel will immediately start deploying the latest version of the code from you GitHub repository.
+
+<Image class='bordered-img' src='/images/blog/deploy-to-vercel/started-deployment.jpg' alt='New Vercel deployment has started' width={700} height={100} />
+
+In less than a minute (depending on the size of the project you're deploying), you should see the following screen, indicating that your project has been deployed successfully.
+
+<Image class='bordered-img' src='/images/blog/deploy-to-vercel/completed-deployment.jpg' alt='Vercel deployment has completed successfully' width={700} height={100} />
+
+Go to your "Deployments" tab and you will see the new deployment that just completed. Click on that deployment and on the following screen, click the "View" button.
+
+<Image class='bordered-img' src='/images/blog/deploy-to-vercel/visit-button.jpg' alt='View new Vercel deployment' width={700} height={100} />
+
+### Wrap It Up
+
+In just a matter of a couple minutes, you were able to create a new project from a starter template, connect it to your GitHub, and make it publically accessible on the internet. That's pretty amazing!
+
+<CodeWithLove />
+
+### Sources
+
+- <ExternalLink href='https://vercel.com'>Vercel</ExternalLink>
+- <ExternalLink href='https://nextjs.org'>Next.js</ExternalLink>
