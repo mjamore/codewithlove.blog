@@ -102,17 +102,12 @@ iframe {
 
 /* This applies to inline code */
 .prose code {
-  @apply px-1 py-0.5 border border-gray-800 rounded-lg bg-gray-700 text-sm;
+  @apply px-1 py-0.5 border border-gray-800 rounded-lg bg-gray-700 text-sm font-mono;
 }
 
 /* This applies to blocks of code */
 .prose pre > code {
   @apply p-6 border border-gray-800 rounded-lg bg-gray-900;
-}
-
-.prose img {
-  /* Don't apply styles to next/image */
-  @apply m-0;
 }
 
 .token.comment,
@@ -253,4 +248,8 @@ footer .link {
 
 .image-grid {
   @apply my-12 grid grid-cols-1 items-center gap-8 sm:grid-cols-2;
+}
+
+.bordered-img {
+  @apply border-2 border-gray-600 rounded-lg my-6;
 }

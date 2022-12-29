@@ -94,7 +94,7 @@ There are a couple different ways to center a child element using CSS Grid, but 
   See the Pen <a href='https://codepen.io/mjamore/pen/BaPorLg'>Centering - Grid</a> by Michael Amore (<a href='https://codepen.io/mjamore'>@mjamore</a>) on{' '}
   <a href='https://codepen.io'>CodePen</a>.
 </iframe>
-<span class='iframe-disclaimer'>**Note:** There is additional styling being loaded in this example. The only relevant CSS is displayed for demonstration purposes.</span>
+<span class='iframe-disclaimer'>**Note:** There is additional styling loaded in this example. Only the relevant CSS is displayed for demonstration purposes.</span>
 
 ##### Pros:
 
@@ -123,7 +123,7 @@ Another superhero CSS property of the modern CSS era is Flexbox. If you are new 
   See the Pen <a href='https://codepen.io/mjamore/pen/rNrOppo'>Centering - Flexbox</a> by Michael Amore (<a href='https://codepen.io/mjamore'>@mjamore</a>) on{' '}
   <a href='https://codepen.io'>CodePen</a>.
 </iframe>
-<span class='iframe-disclaimer'>**Note:** There is additional styling being loaded in this example. The only relevant CSS is displayed for demonstration purposes.</span>
+<span class='iframe-disclaimer'>**Note:** There is additional styling loaded in this example. Only the relevant CSS is displayed for demonstration purposes.</span>
 
 As you can see, there are some nice benefits to this approach. For one, it only requires adding CSS to the parent element. You don't have to modify the child elements at all. On the other hand, other solutions listed above are a single line, whereas this solution requires _3 whole properties_. `align-items: center` and `justify-content: center` are responsible for centering the child element(s) vertically and horizontally. Flexbox can also be used in Scenario 1 and Scenario 2 above, making this a solid go-to option.
 
@@ -135,7 +135,7 @@ As you can see, there are some nice benefits to this approach. For one, it only 
 ##### Cons:
 
 - Requires 3 properties
-- <ExternalLink href='https://caniuse.com/?search=flexbox'>Not supported in older browsers</ExternalLink> (Shouldn't really be much of an issue anymore)
+- <ExternalLink href='https://caniuse.com/?search=flexbox'>Not fully supported in IE</ExternalLink>
 
 ### Scenario 4: If None of the Above Options Work...
 
@@ -155,7 +155,7 @@ The last resort option I would choose is using `position: absolute` and the `tra
   See the Pen <a href='https://codepen.io/mjamore/pen/JjBYLyL'>Centering - Absolute</a> by Michael Amore (<a href='https://codepen.io/mjamore'>@mjamore</a>) on{' '}
   <a href='https://codepen.io'>CodePen</a>.
 </iframe>
-<span class='iframe-disclaimer'>**Note:** There is additional styling being loaded in this example. The only relevant CSS is displayed for demonstration purposes.</span>
+<span class='iframe-disclaimer'>**Note:** There is additional styling loaded in this example. Only the relevant CSS is displayed for demonstration purposes.</span>
 
 ##### Pros:
 

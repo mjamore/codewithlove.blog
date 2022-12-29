@@ -1,15 +1,47 @@
 ---
 author: Michael Amore
 authorImage: /images/michael-amore.jpeg
-date: December 20, 2022
-description: You'll never believe how easy it is to deploy a Next.js application to Vercel. Seriously. It's a gamechanger.
+date: December 28, 2022
+description: You'll never believe how easy it is to deploy a Next.js application to Vercel. Seriously. It's a game changer.
 image: /images/blog/thumbnails/deploy-to-vercel.svg
 tags: [JavaScript, NextJS, Vercel]
 title: How to Deploy a Next.js Application to Vercel
 url: /articles/how-to-deploy-a-nextjs-13-application-to-vercel
 ---
 
-# How to Deploy a NextJS 13 Application to Vercel (With a Custom Domain)
+## TL;DR
+
+Vercel is the quickest and easiest way to deploy a Next.js application. With a few quick steps, your application is up and running on scalable cloud infrastructure and updates every time you push your code.
+
+- Create your Next.js application and push it to GitHub
+- Use Vercel's website to connect Vercel to your GitHub repo
+- Profit
+
+### What Makes Vercel a Great Option for Hosting for Your Next.js Application?
+
+Vercel is the company that funds the development of Next.js and one of the core features of Next.js is the developer experience. So by extension, Vercel's integration with Next.js is first class (although you can deploy many other kinds of projects too). If you haven't tried Vercel as a hosting solution for your Next.js application, you're missing out. I'm hoping this article will convince you to give it a try.
+
+<Image class='bordered-img' src='/images/blog/deploy-to-vercel/vercel-framework-support.jpg' alt='Frameworks supported by Vercel' width={700} height={100} />
+
+### Start a New Next.js Project and Push it to Your GitHub Account
+
+There are a few ways to get started with a Next.js application. You can fork the git repo of an existing <ExternalLink href='https://vercel.com/templates'>
+Next.js template</ExternalLink> or you can create a new NextJS application using:
+
+```bash
+npx create-next-app@latest --typescript
+```
+
+If you create a new Next.js application, you'll need initialize a new git repository (`git init`) and push it to your GitHub account.
+
+### Connect Vercel to Your Git Repository
+
+If you don't already have a Vercel account, <ExternalLink href='https://vercel.com/signup'>create one</ExternalLink>. It's free (no credit card required) and they provide you with free, scalable cloud infrastructure. You have nothing to lose.
+
+You will need to grant Vercel access to your GitHub repository, so I'd recommend choosing GitHub to log into Vercel as well. Once you're logged into Vercel, go to your <ExternalLink href='https://vercel.com/dashboard'>dashboard page</ExternalLink>. Create a new project by clicking the "Add New..." button
+and then selecting the "Project" option.
+
+<Image class='bordered-img' src='/images/blog/deploy-to-vercel/new-vercel-project-closeup.jpg' alt='How to create a new Vercel project' width={700} height={100} />
 
 1. Buy a domain
 
