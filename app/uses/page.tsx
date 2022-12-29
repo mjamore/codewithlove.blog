@@ -67,7 +67,10 @@ export default function UsesPage() {
       <h3>Websites</h3>
       <ul>
         <li>
-          <ExternalLink href='https://unsplash.com/'>Unsplash</ExternalLink>
+          <ExternalLink href='https://unsplash.com/'>Free images: Unsplash</ExternalLink>
+        </li>
+        <li>
+          <ExternalLink href='https://www.commands.dev/'>Easily find terminal commands: commands.dev</ExternalLink>
         </li>
       </ul>
     </div>

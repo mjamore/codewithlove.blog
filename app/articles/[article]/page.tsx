@@ -16,10 +16,9 @@ export default async function ArticlePage({ params }: any) {
       <div className={'flex items-center'}>
         <Image src={blogContent.frontMatter.authorImage} alt={`Image of ${blogContent.frontMatter.author} image`} width={35} height={35} className={'rounded-full shadow-lg'} />
         <div className={'ml-4 flex w-full items-center justify-between text-gray-400'}>
-          <div>
-            <span className={'text-amore-red'}>
-              {blogContent.frontMatter.author} <span className={'text-sm text-gray-400'}>&#x2022; {blogContent.frontMatter.date}</span>
-            </span>
+          <div className={'flex flex-col'}>
+            <span className={'text-amore-red'}>{blogContent.frontMatter.author}</span>
+            <span className={'text-sm text-gray-400'}>{blogContent.frontMatter.date}</span>
           </div>
           <p className={'text-sm'}>{blogContent.readingTime}</p>
         </div>
