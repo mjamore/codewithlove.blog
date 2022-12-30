@@ -55,3 +55,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - GitHub Copilot experience
 - CSS -> Available cursor values demo
   - inspired by https://css-tricks.com/using-css-cursors/
+- CSS Animation using keyframes
+- Did you know that AWS offers a competitor to GitHub Copilot that you can use for free?

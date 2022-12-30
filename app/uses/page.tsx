@@ -72,6 +72,9 @@ export default function UsesPage() {
         <li>
           <ExternalLink href='https://www.commands.dev/'>Easily find terminal commands: commands.dev</ExternalLink>
         </li>
+        <li>
+          <ExternalLink href='https://transform.tools/css-to-tailwind/'>Convert CSS to Tailwind classes</ExternalLink>
+        </li>
       </ul>
     </div>
   );

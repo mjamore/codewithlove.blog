@@ -56,7 +56,7 @@ iframe {
 }
 
 .iframe-disclaimer {
-  @apply text-sm text-gray-400 mt-2 mb-12 block;
+  @apply text-sm text-palette-gray mt-2 mb-12 block;
 }
 
 .skip-nav {
@@ -223,7 +223,7 @@ table {
 }
 
 .external-link {
-  @apply text-gray-500 transition hover:text-gray-200;
+  @apply text-palette-gray transition hover:text-gray-200;
 }
 
 .internal-link {
@@ -235,7 +235,7 @@ table {
 }
 
 footer .link {
-  @apply text-gray-500 transition duration-500 hover:text-gray-200;
+  @apply text-palette-gray transition duration-500 hover:text-gray-200;
 }
 
 .prose-content {

@@ -13,6 +13,7 @@ module.exports = {
       },
       colors: {
         'amore-red': '#D42622',
+        'palette-gray': 'rgb(136 136 136)',
         'content-bg': 'rgb(23 23 23 / 10%)',
         'content-bg2': 'rgba(18 18 18 / .9)',
         gray: {

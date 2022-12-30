@@ -30,6 +30,9 @@ export default async function HomePage() {
       </h1>
       <h2>Recent Articles</h2>
       <div className={'my-6 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3'}>{Articles}</div>
+      <span className={'text-sm text-palette-gray'}>
+        <span className={'font-bold'}>Note:</span> These thumbnails were created using AI-powered, text to image tools. These are the ones I found most amusing.
+      </span>
     </div>
   );
 }
