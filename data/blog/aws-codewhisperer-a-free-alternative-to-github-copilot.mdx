@@ -1,0 +1,68 @@
+---
+author: Michael Amore
+authorImage: /images/michael-amore.jpeg
+date: December 30, 2022
+description: It can be tricky to center a div in CSS ... or is it? This article explains a few of the common techniques used to center a div (or any element) both horizontally and vertically in CSS.
+image: /images/blog/thumbnails/center-a-div.jpg
+tags: [CSS, Flexbox, Grid]
+title: 'AWS CodeWhisperer: A Free Alternative to GitHub Copilot (For Now)'
+url: /articles/aws-codewhisperer-a-free-alternative-to-github-copilot
+---
+
+## TL;DR
+
+AWS has a GitHub Copilot competitor. It's called AWS CodeWhisperer and you can start using it for free today by installing the <ExternalLink href="https://marketplace.visualstudio.com/items?itemName=AmazonWebServices.aws-toolkit-vscode">AWS Toolkit for VS Code</ExternalLink>.
+
+### Introduction
+
+AI is all the rage these days, and rightfully so. We are seeing some amazing AI-driven applications popup that are producing some really stunning results. One area that AI has gotten quite good at is writing code, particularly using the <ExternalLink href="https://beta.openai.com/docs/models/codex">Codex models</ExternalLink> from OpenAI.
+
+Over the last year, GitHub's <ExternalLink href="https://github.com/features/copilot">Copilot</ExternalLink> has been talked about a lot in the tech circles. Copilot is a code completion tool that uses AI to suggest code snippets based on the context of your code, and it's really good at it. However, Copilot is no longer free. Although you can try it free for 60 days, but after that it's $10/month.
+
+So I was delighted when I stumbled across <ExternalLink href="https://aws.amazon.com/codewhisperer/">AWS CodeWhisperer</ExternalLink>, which is a free alternative to GitHub Copilot. So I downloaded it and I'm testing it out.
+
+### Step 1: Install AWS CodeWhisperer in VS Code Via the AWS Toolkit Extension
+
+You can either install this extension from the VS Code Extensions panel or by downloading it from <ExternalLink href="https://marketplace.visualstudio.com/items?itemName=AmazonWebServices.aws-toolkit-vscode">The VS Code Extension Marketplace</ExternalLink>. You'll know the extension has been successfully installed when you see the AWS logo in the left sidebar of VS Code, as shown below:
+
+<Image
+  class='bordered-img'
+  src='/images/blog/aws-codewhisperer/aws-extension-installed.jpg'
+  alt='The AWS Toolkit Extension successfully installed in VS Code'
+  width={700}
+  height={100}
+/>
+
+### Step 2: Enable AWS CodeWhisperer in VS Code
+
+Once the extension is installed, you'll need to enable AWS CodeWhisperer in VS Code. To do this, click on the AWS logo in the left sidebar of VS Code. Under the "Developer Tools" section, expand "AWS CodeWhisperer" and click the "Start" button.
+
+<Image class='bordered-img' src='/images/blog/aws-codewhisperer/start-button.jpg' alt='Start AWS CodeWhisperer in VS Code' width={700} height={100} />
+
+You will be presented with a panel that asks you how you want to connect to AWS. You can either connect with your company SSO or using your personal email.
+
+<Image class='bordered-img' src='/images/blog/aws-codewhisperer/connection-panel.jpg' alt='Connect to AWS' width={700} height={100} />
+
+Once your connected to AWS, a terms of service should popup in VS Code. Click the blue "Accept" button and AWS CodeWhisperer should now be enabled in VS Code.
+
+<Image class='bordered-img' src='/images/blog/aws-codewhisperer/tos.jpg' alt='Connect to AWS' width={700} height={100} />
+
+### Step 3: Configuration
+
+You can configure AWS CodeWhisperer by clicking on the gear icon that is displayed when you hover over the "AWS CodeWhisperer" section within "Developer Tools". The options seem limited to turning the feature on or off and toggling whether you want to share feedback with Amazon, but perhaps this will expand in the future.
+
+<Image class='bordered-img' src='/images/blog/aws-codewhisperer/configuration.jpg' alt='Start AWS CodeWhisperer configuration in VS Code' width={700} height={100} />
+
+### Wrap It Up
+
+I'm just getting started with AWS CodeWhisperer, so it's hard to say how it compares to GitHub Copilot. However, I'm excited to see what it can do and I'm hopeful that it will remain free, but I'm not holding my breath. If you're interested in trying it out, you can download it from the <ExternalLink href="https://marketplace.visualstudio.com/items?itemName=AmazonWebServices.aws-toolkit-vscode">VS Code Extension Marketplace</ExternalLink>.
+
+<CodeWithLove />
+
+### Sources and Inspiration for this Article
+
+<ul className='sources'>
+  <li>
+    <ExternalLink href='https://docs.aws.amazon.com/toolkit-for-vscode/latest/userguide/codewhisperer.html'>AWS CodeWhisperer VS Code documentation</ExternalLink>
+  </li>
+</ul>
