@@ -1,4 +1,7 @@
 import ArticleCard from './components/ArticleCard';
+import ExternalLink from './components/ExternalLink';
+import InternalLink from './components/InternalLink';
+import { URLS } from './utils/constants';
 import { getArticles } from './utils/filesystem';
 
 export default async function HomePage() {
@@ -31,8 +34,24 @@ export default async function HomePage() {
       <h2>Recent Articles</h2>
       <div className={'my-6 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3'}>{Articles}</div>
       <span className={'text-sm text-palette-gray'}>
-        <span className={'font-bold'}>Note:</span> These thumbnails were created using AI-powered, text to image tools. These are the ones I found most amusing.
+        <span className={'font-bold'}>Note:</span> Article thumbnails were created using AI-powered, text to image tools. These are the ones I found most amusing.
       </span>
+
+      <h3 className={'mb-0'}>What is this place?</h3>
+      <p>
+        The <span className={'code-with-love-text'}>code with love</span> blog is where I, <ExternalLink href='https://twitter.com/amore_codes'>Michael Amore</ExternalLink>,
+        document interesting tidbits and insights I have about software engineering practices, JavaScript, technology, and more. Sometimes it&apos;s just sharing a new piece of
+        technology I&apos;m enjoying using and other times it&apos;s about how my experience has molded my opinions on certain software engineering topics. Sometimes it&apos;s just
+        ranting.
+      </p>
+
+      <p>
+        Anyway, however you got here, I&apos;m glad you&apos;re here. Read a few <InternalLink href={URLS.ROUTES.ARTICLES}>articles</InternalLink> and if you find any particularly
+        interesting, please share it on social media. Reach out to me at <ExternalLink href='https://twitter.com/amore_codes'>@amore_codes</ExternalLink> with any questions or
+        feedback.
+      </p>
+
+      <p>I appreciate you. Peace and Love.</p>
     </div>
   );
 }
