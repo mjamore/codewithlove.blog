@@ -40,14 +40,20 @@ export default async function HomePage() {
       <h3 className={'mb-0'}>What is this place?</h3>
       <p>
         The <span className={'code-with-love-text'}>code with love</span> blog is where I, <ExternalLink href='https://twitter.com/amore_codes'>Michael Amore</ExternalLink>,
-        document interesting tidbits and insights I have about software engineering practices, JavaScript, technology, and more. Sometimes it&apos;s just sharing a new piece of
-        technology I&apos;m enjoying using and other times it&apos;s about how my experience has molded my opinions on certain software engineering topics. Sometimes it&apos;s just
-        ranting.
+        document interesting tidbits and insights I have about software engineering practices, web development, technology, and more. Sometimes it&apos;s just sharing a new piece
+        of technology I&apos;m enjoying using and other times it&apos;s about how my experience has molded my opinions on certain software engineering topics. Sometimes it&apos;s
+        just ranting.
       </p>
 
       <p>
-        Anyway, however you got here, I&apos;m glad you&apos;re here. Read a few <InternalLink href={URLS.ROUTES.ARTICLES}>articles</InternalLink> and if you find any particularly
-        interesting, please share it on social media. Reach out to me at <ExternalLink href='https://twitter.com/amore_codes'>@amore_codes</ExternalLink> with any questions or
+        As a software engineer with 10+ years of building web/mobile applications, I&apos;ve seen the landscape of web development and mobile development evolve firsthand over that
+        time. These days I love using Next.js, Remix, TypeScript, Tailwind, and many other technologies. You can see my everyday tech stack and other resources I use on my{' '}
+        <InternalLink href={URLS.ROUTES.USES}>uses</InternalLink> page.
+      </p>
+
+      <p>
+        However you got here, I&apos;m glad you&apos;re here. Read a few <InternalLink href={URLS.ROUTES.ARTICLES}>articles</InternalLink> and if you find any particularly
+        interesting, please share them on social media. Reach out to me at <ExternalLink href='https://twitter.com/amore_codes'>@amore_codes</ExternalLink> with any questions or
         feedback.
       </p>
 

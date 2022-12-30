@@ -3,6 +3,7 @@ export const URLS = {
   ROUTES: {
     HOME: '/',
     ABOUT: '/about',
-    ARTICLES: '/articles'
-  }
+    ARTICLES: '/articles',
+    USES: '/uses',
+  },
 };
