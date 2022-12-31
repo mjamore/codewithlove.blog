@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import MDX from '../../components/MDX';
+import MDX from '../../../components/MDX';
 import { getArticle } from '../../utils/filesystem';
 import 'highlight.js/styles/atom-one-dark.css';
 import '../../../styles/article.css';

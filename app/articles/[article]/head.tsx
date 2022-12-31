@@ -1,5 +1,5 @@
 import { URLS } from '../../utils/constants';
-import CommonHeadTags from '../../components/CommonHeadTags';
+import CommonHeadTags from '../../../components/CommonHeadTags';
 import { getArticle } from '../../utils/filesystem';
 import { PageProps } from '../../utils/types';
 

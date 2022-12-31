@@ -1,6 +1,6 @@
-import ArticleCard from './components/ArticleCard';
-import ExternalLink from './components/ExternalLink';
-import InternalLink from './components/InternalLink';
+import ArticleCard from '../components/ArticleCard';
+import ExternalLink from '../components/ExternalLink';
+import InternalLink from '../components/InternalLink';
 import { URLS } from './utils/constants';
 import { getArticles } from './utils/filesystem';
 

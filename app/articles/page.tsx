@@ -1,4 +1,4 @@
-import ArticleListItem from '../components/ArticleListItem';
+import ArticleListItem from '../../components/ArticleListItem';
 import { getArticles } from '../utils/filesystem';
 
 // /articles route

@@ -8,7 +8,7 @@ import CodeWithLove from './CodeWithLove';
 const components = {
   CodeWithLove: (props: any) => <CodeWithLove {...props} />,
   ExternalLink: (props: any) => <ExternalLink {...props} />,
-  Image: (props: any) => <Image {...props} />,
+  Image: (props: any) => <Image {...props} alt={props.alt} />,
   Tip: (props: any) => <Tip {...props} />,
   h2: (props: any) => <h2 className={'mb-0'} {...props} />,
   h3: (props: any) => <h3 className={'mt-28'} {...props} />,
