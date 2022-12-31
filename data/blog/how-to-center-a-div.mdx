@@ -17,7 +17,7 @@ The optimal way to center an element in CSS will vary depending on which of the 
 2. Are you trying to center a block element or an inline element?
 3. Do you know the width/height of the element or not.
 
-Overall, in modern browsers, <a class="internal-link" href="#option-1-css-grid">CSS Grid</a> or <a class="internal-link" href="#option-2-flexbox">Flexbox</a> are great catch-all solutions.
+Overall, in modern browsers, <a className="internal-link" href="#option-1-css-grid">CSS Grid</a> or <a className="internal-link" href="#option-2-flexbox">Flexbox</a> are great catch-all solutions.
 
 <Tip text='TIP: Find the scenario below that is applicable to your situation.' />
 
@@ -32,7 +32,7 @@ It's relatively easy to horizontally center an inline element (`a`, `code`, `but
   src='https://codepen.io/mjamore/embed/BaPoYQV?default-tab=css%2Cresult&editable=true'
   loading='lazy'
   allowtransparency='true'
-  allowfullscreen='true'
+  allowFullScreen={true}
 >
   See the Pen <a href='https://codepen.io/mjamore/pen/BaPoYQV'>Centering - Inline Horizontal</a> by Michael Amore (<a href='https://codepen.io/mjamore'>@mjamore</a>) on{' '}
   <a href='https://codepen.io'>CodePen</a>.
@@ -57,7 +57,7 @@ If you find yourself in this situation, consider yourself lucky because the solu
   src='https://codepen.io/mjamore/embed/YzjyezN?default-tab=css%2Cresult&editable=true'
   loading='lazy'
   allowtransparency='true'
-  allowfullscreen='true'
+  allowFullScreen={true}
 >
   See the Pen <a href='https://codepen.io/mjamore/pen/YzjyezN'>Centering - Margin: 0 auto</a> by Michael Amore (<a href='https://codepen.io/mjamore'>@mjamore</a>) on{' '}
   <a href='https://codepen.io'>CodePen</a>.
@@ -89,12 +89,12 @@ There are a couple different ways to center a child element using CSS Grid, but 
   frameBorder='no'
   loading='lazy'
   allowtransparency='true'
-  allowfullscreen='true'
+  allowFullScreen={true}
 >
   See the Pen <a href='https://codepen.io/mjamore/pen/BaPorLg'>Centering - Grid</a> by Michael Amore (<a href='https://codepen.io/mjamore'>@mjamore</a>) on{' '}
   <a href='https://codepen.io'>CodePen</a>.
 </iframe>
-<span class='iframe-disclaimer'>**Note:** There is additional styling loaded in this example. Only the relevant CSS is displayed for demonstration purposes.</span>
+<span className='iframe-disclaimer'>**Note:** There is additional styling loaded in this example. Only the relevant CSS is displayed for demonstration purposes.</span>
 
 ##### Pros:
 
@@ -118,12 +118,12 @@ Another superhero CSS property of the modern CSS era is Flexbox. If you are new 
   src='https://codepen.io/mjamore/embed/rNrOppo?default-tab=css%2Cresult&editable=true'
   loading='lazy'
   allowtransparency='true'
-  allowfullscreen='true'
+  allowFullScreen={true}
 >
   See the Pen <a href='https://codepen.io/mjamore/pen/rNrOppo'>Centering - Flexbox</a> by Michael Amore (<a href='https://codepen.io/mjamore'>@mjamore</a>) on{' '}
   <a href='https://codepen.io'>CodePen</a>.
 </iframe>
-<span class='iframe-disclaimer'>**Note:** There is additional styling loaded in this example. Only the relevant CSS is displayed for demonstration purposes.</span>
+<span className='iframe-disclaimer'>**Note:** There is additional styling loaded in this example. Only the relevant CSS is displayed for demonstration purposes.</span>
 
 As you can see, there are some nice benefits to this approach. For one, it only requires adding CSS to the parent element. You don't have to modify the child elements at all. On the other hand, other solutions listed above are a single line, whereas this solution requires _3 whole properties_. `align-items: center` and `justify-content: center` are responsible for centering the child element(s) vertically and horizontally. Flexbox can also be used in Scenario 1 and Scenario 2 above, making this a solid go-to option.
 
@@ -150,12 +150,12 @@ The last resort option I would choose is using `position: absolute` and the `tra
   frameBorder='no'
   loading='lazy'
   allowtransparency='true'
-  allowfullscreen='true'
+  allowFullScreen={true}
 >
   See the Pen <a href='https://codepen.io/mjamore/pen/JjBYLyL'>Centering - Absolute</a> by Michael Amore (<a href='https://codepen.io/mjamore'>@mjamore</a>) on{' '}
   <a href='https://codepen.io'>CodePen</a>.
 </iframe>
-<span class='iframe-disclaimer'>**Note:** There is additional styling loaded in this example. Only the relevant CSS is displayed for demonstration purposes.</span>
+<span className='iframe-disclaimer'>**Note:** There is additional styling loaded in this example. Only the relevant CSS is displayed for demonstration purposes.</span>
 
 ##### Pros:
 

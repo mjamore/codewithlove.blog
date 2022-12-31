@@ -5,6 +5,8 @@ A blog for documenting my journey in the field of software engineering.
 ## TO-DO
 
 - integrate with a db to store blog post view counts
+- check site against https://securityheaders.com/
+  - might need udpates to next.config.js?
 
 ## Running Locally
 
