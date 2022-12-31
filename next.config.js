@@ -78,5 +78,10 @@ const securityHeaders = [
   {
     key: 'X-XSS-Protection',
     value: '1; mode=block'
+  },
+  // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/access-control-allow-origin
+  {
+    key: 'access-control-allow-origin',
+    value: 'https://codewithlove.blog'
   }
 ];
