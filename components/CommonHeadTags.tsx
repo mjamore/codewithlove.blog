@@ -1,8 +1,8 @@
 export default function CommonHeadTags() {
   return (
     <>
-      <meta charSet='utf-8'></meta>
-      <meta name='viewport' content='width=device-width, initial-scale=1, viewport-fit=cover'></meta>
+      <meta charSet='utf-8' />
+      <meta name='viewport' content='width=device-width, initial-scale=1, viewport-fit=cover' />
       {/* To run the web application in full-screen */}
       <meta name='apple-mobile-web-app-capable' content='yes' />
       {/* Status Bar Style (see Supported Meta Tags below for available values)
