@@ -4,12 +4,6 @@ A blog for documenting my journey in the field of software engineering.
 
 ## TO-DO
 
-- Add code snippets with prism
-- Create "uses" page
-  - on uses.tech
-- Add resume on https://read.cv/ and add link to footer
-- look into Tailwind variables for things like background color and content width
-- create a contact page
 - integrate with a db to store blog post view counts
 
 ## Running Locally
@@ -28,9 +22,8 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Simply push the code and Vercel handles building/deploying
+  - https://vercel.com/mjamore/codewithlove
 
 ## Article Ideas:
 
