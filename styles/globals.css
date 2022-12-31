@@ -253,3 +253,11 @@ footer .link {
 .bordered-img {
   @apply border-2 border-gray-600 rounded-lg my-6;
 }
+
+.twitter-tweet {
+  @apply mx-auto;
+}
+
+.twitter-tweet iframe {
+  @apply mb-0;
+}

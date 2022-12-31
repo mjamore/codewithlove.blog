@@ -6,7 +6,9 @@ A blog for documenting my journey in the field of software engineering.
 
 - integrate with a db to store blog post view counts
 - check site against https://securityheaders.com/
-  - might need udpates to next.config.js?
+  - might need updates to next.config.js?
+- make sitemap.xml dynamic
+- figure out structured data in Next 13
 
 ## Running Locally
 

@@ -30,11 +30,11 @@ const ContentSecurityPolicy = `
     font-src 'self';
     form-action 'self';
     frame-ancestors 'none';
-    frame-src 'self' https://codepen.io;
+    frame-src 'self' *.twitter.com https://codepen.io;
     img-src * blob: data:;
     manifest-src 'self';
     media-src 'none';
-    script-src 'self' 'unsafe-eval' 'unsafe-inline' *.vercel-insights.com;
+    script-src 'self' 'unsafe-eval' 'unsafe-inline' *.twitter.com *.vercel-insights.com;
     style-src 'self' 'unsafe-inline' *.googleapis.com;
 `;
 
