@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArticleMetaData } from '../app/utils/types';
+import { ArticleMetaData } from '../utils/types';
 
 export default function ArticleCard({ author, authorImage, date, description, image, readingTime, title, url }: ArticleMetaData) {
   return (

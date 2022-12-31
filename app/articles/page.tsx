@@ -1,5 +1,5 @@
 import ArticleListItem from '../../components/ArticleListItem';
-import { getArticles } from '../utils/filesystem';
+import { getArticles } from '../../utils/filesystem';
 
 // /articles route
 export default async function ArticlesPage() {

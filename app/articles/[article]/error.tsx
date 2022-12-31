@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useEffect } from 'react';
-import { URLS } from '../../utils/constants';
+import { URLS } from '../../../utils/constants';
 
 export default function Error({ error, reset }: { error: Error; reset: () => void }) {
   useEffect(() => {

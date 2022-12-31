@@ -1,8 +1,8 @@
 import ArticleCard from '../components/ArticleCard';
 import ExternalLink from '../components/ExternalLink';
 import InternalLink from '../components/InternalLink';
-import { URLS } from './utils/constants';
-import { getArticles } from './utils/filesystem';
+import { URLS } from '../utils/constants';
+import { getArticles } from '../utils/filesystem';
 
 export default async function HomePage() {
   const articles = await getArticles();

@@ -1,5 +1,5 @@
 import CommonHeadTags from '../components/CommonHeadTags';
-import { URLS } from './utils/constants';
+import { URLS } from '../utils/constants';
 
 export default function Head() {
   const meta = {

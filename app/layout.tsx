@@ -3,7 +3,7 @@ import '../styles/globals.css';
 import cn from 'classnames';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Providers } from './utils/providers';
+import { Providers } from '../utils/providers';
 
 const quicksand = Quicksand({
   variable: '--font-inter',

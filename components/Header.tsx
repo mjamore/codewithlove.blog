@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import Link from 'next/link';
 import Image from 'next/image';
-import { URLS } from '../app/utils/constants';
+import { URLS } from '../utils/constants';
 import MobileMenu from './MobileMenu';
 // import { useRouter } from 'next/router';
 import styles from './Header.module.css';

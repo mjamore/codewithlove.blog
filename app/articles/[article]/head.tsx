@@ -1,8 +1,8 @@
 import Script from 'next/script';
-import { URLS } from '../../utils/constants';
+import { URLS } from '../../../utils/constants';
 import CommonHeadTags from '../../../components/CommonHeadTags';
-import { getArticle } from '../../utils/filesystem';
-import { PageProps } from '../../utils/types';
+import { getArticle } from '../../../utils/filesystem';
+import { PageProps } from '../../../utils/types';
 
 export default async function Head({ params }: PageProps) {
   const blogContent = await getArticle(`${params.article}.mdx`);

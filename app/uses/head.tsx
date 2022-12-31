@@ -1,4 +1,4 @@
-import { URLS } from '../utils/constants';
+import { URLS } from '../../utils/constants';
 import CommonHeadTags from '../../components/CommonHeadTags';
 
 export default function Head() {
