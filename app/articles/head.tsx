@@ -6,7 +6,6 @@ export default function Head() {
     title: 'Articles | The Code With Love Web Development Blog by Michael Amore',
     description: `A list of blog articles I've written about such as front-end development, code deployment, AI code assistant tools, and my career path as a software engineer.`,
     image: '/images/logos/logo-amore-red-white.png',
-    type: 'website',
     editedDate: '12/30/2022',
   };
 
@@ -17,7 +16,6 @@ export default function Head() {
       <meta name='description' content={meta.description} />
       <link rel='canonical' href={`${URLS.DOMAIN}/${URLS.ROUTES.ABOUT}`} />
       <meta property='og:url' content={`${URLS.DOMAIN}/${URLS.ROUTES.ABOUT}`} />
-      <meta property='og:type' content={meta.type} />
       <meta property='og:description' content={meta.description} />
       <meta property='og:title' content={meta.title} />
       <meta property='og:image' content={meta.image} />

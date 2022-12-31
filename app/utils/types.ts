@@ -1,5 +1,11 @@
 import { MDXRemoteSerializeResult } from 'next-mdx-remote';
 
+export type PageProps = {
+  params: {
+    article: string;
+  };
+};
+
 export type ArticleMetaData = {
   author: string;
   authorImage: string;

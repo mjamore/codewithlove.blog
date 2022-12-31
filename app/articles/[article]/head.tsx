@@ -1,14 +1,11 @@
-import { URLS } from '../utils/constants';
-import CommonHeadTags from '../components/CommonHeadTags';
+import { URLS } from '../../utils/constants';
+import CommonHeadTags from '../../components/CommonHeadTags';
+import { getArticle } from '../../utils/filesystem';
+import { PageProps } from '../../utils/types';
 
-export default function Head() {
-  const meta = {
-    title: 'About the Code With Love Web Development Blog by Michael Amore',
-    description: `The Code With Love blog is the personal blog of software engineer Michael Amore where I blog about my journey as a software engineer.`,
-    image: '/images/logos/logo-amore-red-white.png',
-    editedDate: '12/30/2022',
-  };
-
+export default async function Head({ params }: PageProps) {
+  const blogContent = await getArticle(`${params.article}.mdx`);
+  const meta = blogContent.frontMatter;
   return (
     <>
       <CommonHeadTags />

@@ -3,8 +3,9 @@ import MDX from '../../components/MDX';
 import { getArticle } from '../../utils/filesystem';
 import 'highlight.js/styles/atom-one-dark.css';
 import '../../../styles/article.css';
+import { PageProps } from '../../utils/types';
 
-export default async function ArticlePage({ params }: any) {
+export default async function ArticlePage({ params }: PageProps) {
   const blogContent = await getArticle(`${params.article}.mdx`);
 
   return (
