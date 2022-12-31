@@ -1,3 +1,4 @@
+import CommonHeadTags from '../components/CommonHeadTags';
 import { URLS } from './utils/constants';
 
 export default function Head() {
@@ -10,6 +11,7 @@ export default function Head() {
 
   return (
     <>
+      <CommonHeadTags />
       <title>{meta.title}</title>
       <meta content={meta.description} name='description' />
       <meta property='og:url' content={`${URLS.DOMAIN}`} />
