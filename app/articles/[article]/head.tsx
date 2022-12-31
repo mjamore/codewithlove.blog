@@ -11,8 +11,8 @@ export default async function Head({ params }: PageProps) {
       <CommonHeadTags />
       <title>{meta.title}</title>
       <meta name='description' content={meta.description} />
-      <link rel='canonical' href={`${URLS.DOMAIN}/${URLS.ROUTES.ABOUT}`} />
-      <meta property='og:url' content={`${URLS.DOMAIN}/${URLS.ROUTES.ABOUT}`} />
+      <link rel='canonical' href={`${URLS.DOMAIN}${meta.url}`} />
+      <meta property='og:url' content={`${URLS.DOMAIN}${meta.url}`} />
       <meta property='og:description' content={meta.description} />
       <meta property='og:title' content={meta.title} />
       <meta property='og:image' content={meta.image} />
