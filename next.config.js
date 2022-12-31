@@ -24,13 +24,18 @@ module.exports = {
 
 // https://nextjs.org/docs/advanced-features/security-headers
 const ContentSecurityPolicy = `
-    default-src 'self';
+    base-uri 'self';
+    connect-src *;
+    default-src 'none';
+    font-src 'self';
+    form-action 'self';
+    frame-ancestors 'none';
+    frame-src 'self' https://codepen.io;
+    img-src * blob: data:;
+    manifest-src 'self';
+    media-src 'none';
     script-src 'self' 'unsafe-eval' 'unsafe-inline' *.vercel-insights.com;
     style-src 'self' 'unsafe-inline' *.googleapis.com;
-    media-src 'none';
-    connect-src *;
-    font-src 'self';
-    frame-src 'self' https://codepen.io;
 `;
 
 const securityHeaders = [
