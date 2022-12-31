@@ -4,7 +4,7 @@ export default function AboutPage() {
   return (
     <div className={'prose-content'}>
       <h1>
-        About the <span className={'code-with-love-text'}>Code With Love</span> Blog
+        About the <span className={'code-with-love-text'}>Code With Love</span> Web Development Blog
       </h1>
 
       <p>

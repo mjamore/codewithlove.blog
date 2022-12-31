@@ -1,9 +1,10 @@
-import { URLS } from './utils/constants';
+import { URLS } from '../utils/constants';
+import CommonHeadTags from '../components/CommonHeadTags';
 
 export default function Head() {
   const meta = {
-    title: 'Code With Love Blog | Web Development, Tech, and Software Engineering',
-    description: `A blog about web development, technology, and software engineering, written by Michael Amore, in Orange County, California.`,
+    title: 'About the Code With Love Web Development Blog | By Michael Amore',
+    description: `The Code With Love blog is the personal blog of software engineer Michael Amore where I blog about my journey as a software engineer.`,
     image: '/images/logos/logo-amore-red-white.png',
     type: 'website',
     editedDate: '12/30/2022',
@@ -11,10 +12,11 @@ export default function Head() {
 
   return (
     <>
+      <CommonHeadTags />
       <title>{meta.title}</title>
-      <meta content={meta.description} name='description' />
-      <meta property='og:url' content={`${URLS.DOMAIN}`} />
-      <link rel='canonical' href={`${URLS.DOMAIN}`} />
+      <meta name='description' content={meta.description} />
+      <link rel='canonical' href={`${URLS.DOMAIN}/${URLS.ROUTES.ABOUT}`} />
+      <meta property='og:url' content={`${URLS.DOMAIN}/${URLS.ROUTES.ABOUT}`} />
       <meta property='og:type' content={meta.type} />
       <meta property='og:description' content={meta.description} />
       <meta property='og:title' content={meta.title} />
