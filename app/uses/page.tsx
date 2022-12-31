@@ -67,10 +67,10 @@ export default function UsesPage() {
       <h3>Websites</h3>
       <ul>
         <li>
-          <ExternalLink href='https://unsplash.com/'>Free images: Unsplash</ExternalLink>
+          Free images: <ExternalLink href='https://unsplash.com/'>Unsplash</ExternalLink>
         </li>
         <li>
-          <ExternalLink href='https://www.commands.dev/'>Easily find terminal commands: commands.dev</ExternalLink>
+          Easily find terminal commands: <ExternalLink href='https://www.commands.dev/'>commands.dev</ExternalLink>
         </li>
         <li>
           <ExternalLink href='https://transform.tools/css-to-tailwind/'>Convert CSS to Tailwind classes</ExternalLink>
