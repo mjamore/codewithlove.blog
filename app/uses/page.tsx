@@ -76,7 +76,10 @@ export default function UsesPage() {
           <ExternalLink href='https://transform.tools/css-to-tailwind/'>Convert CSS to Tailwind classes</ExternalLink>
         </li>
         <li>
-          Create Code Snippets for Twitter<ExternalLink href='https://carbon.now.sh/'>Carbon</ExternalLink>
+          Create Code Snippets for Twitter <ExternalLink href='https://carbon.now.sh/'>Carbon</ExternalLink>
+        </li>
+        <li>
+          Find Available <ExternalLink href='https://oneword.domains/'>One Word Domains</ExternalLink>
         </li>
       </ul>
     </div>
