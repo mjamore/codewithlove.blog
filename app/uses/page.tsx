@@ -75,6 +75,9 @@ export default function UsesPage() {
         <li>
           <ExternalLink href='https://transform.tools/css-to-tailwind/'>Convert CSS to Tailwind classes</ExternalLink>
         </li>
+        <li>
+          Create Code Snippets for Twitter<ExternalLink href='https://carbon.now.sh/'>Carbon</ExternalLink>
+        </li>
       </ul>
     </div>
   );
