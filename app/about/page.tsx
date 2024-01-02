@@ -19,7 +19,6 @@ export default function AboutPage() {
       </p>
 
       <div className={'image-grid'}>
-        <Image src={'/images/about/happy-family.jpeg'} alt={'Michael and Tara on a hike'} width={650} height={650} />
         <Image src={'/images/about/marley.jpg'} alt={'Marley eating fruit in the backyard'} width={650} height={650} />
       </div>
 
