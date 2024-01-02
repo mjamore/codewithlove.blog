@@ -81,6 +81,16 @@ export default function UsesPage() {
         <li>
           Find Available <ExternalLink href='https://oneword.domains/'>One Word Domains</ExternalLink>
         </li>
+        <li>
+          Placeholder API JSON Responses: <ExternalLink href="https://jsonplaceholder.typicode.com/">JSON PlaceHolder</ExternalLink>
+        </li>
+      </ul>
+
+      <h3>React Components and Libraries</h3>
+      <ul>
+        <li>
+          The best select menus: <ExternalLink href='https://react-select.com/home'>React Select</ExternalLink>
+        </li>
       </ul>
     </div>
   );
